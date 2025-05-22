@@ -18,14 +18,12 @@ class SidebarMenuCell extends Cell
             $menu = [
                 ['title' => 'Dashboard', 'url' => "/admin", 'icon' => 'bi-columns-gap'],
                 ['title' => 'Pegawai', 'url' => "/admin/pegawai", 'icon' => 'bi-people'],
-                ['title' => 'Jadwal', 'url' => '/admin/jadwal', 'icon' => 'bi-calendar-event'],
                 ['title' => 'Cuti', 'url' => '/admin/cuti', 'icon' => 'bi-calendar-check'],
                 ['title' => 'Jabatan', 'url' => '/admin/jabatan', 'icon' => 'bi-person-badge'],
             ];
         } else {
             $menu = [
                 ['title' => 'Dashboard', 'url' => "/dashboard", 'icon' => 'bi-columns-gap'],
-                ['title' => 'Jadwal', 'url' => "/dashboard/jadwal", 'icon' => 'bi-calendar-event'],
             ];
         }
 

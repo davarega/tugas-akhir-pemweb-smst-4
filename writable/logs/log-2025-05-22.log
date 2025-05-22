@@ -1237,3 +1237,422 @@ WHERE `id` = :id:
 16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
 DEBUG - 2025-05-22 02:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:26:52 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:26:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:26:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:26:52 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:30:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 05:33:49 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'simpeg', 3306, '', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 D:\apps\laragon\www\simpeg\app\Controllers\Auth.php(25): CodeIgniter\BaseModel->first()
+#7 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\apps\laragon\www\simpeg\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\apps\laragon\www\simpeg\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#5 D:\apps\laragon\www\simpeg\app\Controllers\Auth.php(25): CodeIgniter\BaseModel->first()
+#6 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Auth->login()
+#7 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#13 {main}
+DEBUG - 2025-05-22 05:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:34:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:40:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:42:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:42:05 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/cuti]
+in APPPATH\Views\admin\cuti\cuti.php on line 6.
+ 1 APPPATH\Views\admin\cuti\cuti.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/cuti', [], true)
+ 5 APPPATH\Controllers\Cuti.php(27): view('admin/cuti/cuti', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:48:50 --> ErrorException: Undefined variable $pegawai
+[Method: GET, Route: admin/cuti]
+in APPPATH\Views\admin\cuti\cuti.php on line 23.
+ 1 APPPATH\Views\admin\cuti\cuti.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php', 23)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/cuti', [], true)
+ 5 APPPATH\Controllers\Cuti.php(27): view('admin/cuti/cuti', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:49:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:49:05 --> ErrorException: Undefined variable $pegawai
+[Method: GET, Route: admin/cuti]
+in APPPATH\Views\admin\cuti\cuti.php on line 23.
+ 1 APPPATH\Views\admin\cuti\cuti.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php', 23)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/cuti', [], true)
+ 5 APPPATH\Controllers\Cuti.php(27): view('admin/cuti/cuti', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:49:10 --> ErrorException: Undefined array key "nama_lengkap"
+[Method: GET, Route: admin/cuti]
+in APPPATH\Views\admin\cuti\cuti.php on line 26.
+ 1 APPPATH\Views\admin\cuti\cuti.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_lengkap"', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php', 26)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\cuti.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/cuti', [], true)
+ 5 APPPATH\Controllers\Cuti.php(27): view('admin/cuti/cuti', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:52:59 --> ErrorException: Undefined variable $active
+[Method: GET, Route: admin/pegawai/2303040097]
+in APPPATH\Views\cells\sidebar_menu.php on line 3.
+ 1 APPPATH\Views\cells\sidebar_menu.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\cells\\sidebar_menu.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\cells\\sidebar_menu.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('cells/sidebar_menu', [], true)
+ 5 APPPATH\Cells\SidebarMenuCell.php(30): view('cells/sidebar_menu', [...])
+ 6 SYSTEMPATH\View\Cell.php(233): App\Cells\SidebarMenuCell->show()
+ 7 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderCell(Object(App\Cells\SidebarMenuCell), 'show', [])
+ 8 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('SidebarMenuCell::show', [], 0, 'AppCellsSidebarMenuCellshow40cd750bba9870f18aada2478b24840a')
+ 9 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('SidebarMenuCell::show')
+10 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+11 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+12 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+13 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/detail_pegawai', [], true)
+14 APPPATH\Controllers\Pegawai.php(135): view('admin/pegawai/detail_pegawai', [...])
+15 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->show('2303040097')
+16 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+17 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:53:07 --> ErrorException: Undefined variable $active
+[Method: GET, Route: admin/pegawai/2303040097]
+in APPPATH\Views\cells\sidebar_menu.php on line 3.
+ 1 APPPATH\Views\cells\sidebar_menu.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\cells\\sidebar_menu.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\cells\\sidebar_menu.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('cells/sidebar_menu', [], true)
+ 5 APPPATH\Cells\SidebarMenuCell.php(30): view('cells/sidebar_menu', [...])
+ 6 SYSTEMPATH\View\Cell.php(233): App\Cells\SidebarMenuCell->show()
+ 7 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderCell(Object(App\Cells\SidebarMenuCell), 'show', [])
+ 8 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('SidebarMenuCell::show', [], 0, 'AppCellsSidebarMenuCellshow40cd750bba9870f18aada2478b24840a')
+ 9 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('SidebarMenuCell::show')
+10 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+11 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+12 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+13 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/detail_pegawai', [], true)
+14 APPPATH\Controllers\Pegawai.php(135): view('admin/pegawai/detail_pegawai', [...])
+15 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->show('2303040097')
+16 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+17 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+21 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 05:53:28 --> ErrorException: Undefined variable $jabatan
+[Method: GET, Route: admin/pegawai/2303040097]
+in APPPATH\Views\admin\pegawai\detail_pegawai.php on line 29.
+ 1 APPPATH\Views\admin\pegawai\detail_pegawai.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jabatan', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\detail_pegawai.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\detail_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/detail_pegawai', [], true)
+ 5 APPPATH\Controllers\Pegawai.php(135): view('admin/pegawai/detail_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->show('2303040097')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 05:53:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:53:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:53:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 05:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 06:00:45 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/cuti/detail.php"
+[Method: GET, Route: admin/cuti/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/cuti/detail.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/detail', [], true)
+ 3 APPPATH\Controllers\Cuti.php(38): view('admin/cuti/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->show('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 06:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 06:02:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/cuti/detail.php"
+[Method: GET, Route: admin/cuti/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/cuti/detail.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/detail', [], true)
+ 3 APPPATH\Controllers\Cuti.php(38): view('admin/cuti/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->show('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 06:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 06:10:17 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/cuti/1]
+in APPPATH\Views\admin\cuti\detail_cuti.php on line 6.
+ 1 APPPATH\Views\admin\cuti\detail_cuti.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\detail_cuti.php', 6)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\detail_cuti.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/detail_cuti', [], true)
+ 5 APPPATH\Controllers\Cuti.php(36): view('admin/cuti/detail_cuti', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 06:11:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 06:11:06 --> ErrorException: Trying to access array offset on null
+[Method: GET, Route: admin/cuti/13]
+in APPPATH\Views\admin\cuti\detail_cuti.php on line 5.
+ 1 APPPATH\Views\admin\cuti\detail_cuti.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on null', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\detail_cuti.php', 5)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\cuti\\detail_cuti.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/cuti/detail_cuti', [], true)
+ 5 APPPATH\Controllers\Cuti.php(36): view('admin/cuti/detail_cuti', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cuti->show('13')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cuti))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 06:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:12:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 06:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

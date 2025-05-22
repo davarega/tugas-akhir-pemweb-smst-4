@@ -35,14 +35,14 @@ $routes->group('admin', ['filter' => 'auth', 'filter' => 'admin'], function ($ro
 	$routes->get('jabatan', 'Jabatan::index');
 	$routes->get('jabatan/(:num)', 'Jabatan::show/$1');
 	$routes->get('jabatan/create', 'Jabatan::create');
-	$routes->post('jabatan/edit/(:num)', 'Jabatan::edit/$1');
+	$routes->post('jabatan/store', 'Jabatan::store');
+	$routes->get('jabatan/edit/(:num)', 'Jabatan::edit/$1');
+	$routes->post('jabatan/update/(:num)', 'Jabatan::update/$1');
 	$routes->get('jabatan/delete/(:num)', 'Jabatan::delete/$1');
 
 	$routes->get('cuti', 'Cuti::index');
 	$routes->get('cuti/(:num)', 'Cuti::show/$1');
-	$routes->get('cuti/create', 'Cuti::create');
-	$routes->post('cuti/edit/(:num)', 'Cuti::edit/$1');
-	$routes->get('cuti/delete/(:num)', 'Cuti::delete/$1');
-	$routes->get('cuti/approve/(:num)', 'Cuti::approve/$1');
-	$routes->get('cuti/reject/(:num)', 'Cuti::reject/$1');
+	$routes->post('cuti/delete/(:num)', 'Cuti::delete/$1');
+	$routes->post('cuti/approve/(:num)', 'Cuti::approve/$1');
+	$routes->post('cuti/reject/(:num)', 'Cuti::reject/$1');
 });

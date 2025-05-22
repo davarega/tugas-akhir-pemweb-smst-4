@@ -30,7 +30,7 @@ class Pegawai extends BaseController
             'nama_lengkap' => 'required|min_length[3]|max_length[255]',
             'email' => 'required|valid_email|is_unique[pegawai.email]',
             'password' => 'required|min_length[6]',
-            'id_jabatan' => 'required|integer|is_not_unique[jabatan.id]', // asumsi tabel jabatan ada
+            'id_jabatan' => 'required|integer|is_not_unique[jabatan.id_jabatan]', // asumsi tabel jabatan ada
             'tempat_lahir' => 'required|min_length[2]|max_length[255]',
             'tanggal_lahir' => 'required|valid_date',
             'jenis_kelamin' => 'required|in_list[L,P]',
@@ -103,7 +103,7 @@ class Pegawai extends BaseController
             'jenis_kelamin' => $this->request->getPost('jenis_kelamin'),
             'alamat' => $this->request->getPost('alamat'),
             'nomor_hp' => $this->request->getPost('nomor_hp'),
-            'foto' => $foto->getName(),
+            'foto' => '/img/usersProfile/' . $foto->getName(),
             'role' => $this->request->getPost('role')
         ]);
 
@@ -125,18 +125,13 @@ class Pegawai extends BaseController
     {
         $jabatanModel = new JabatanModel();
 
-        $data = [
-            'title' => 'Detail Pegawai',
-            'active' => 'Pegawai',
-            'user' => $this->user,
-            'pegawai' => (new PegawaiModel())->find($id),
-        ];
-        if (!$data['pegawai']) {
+        $this->data['pegawai'] = (new PegawaiModel())->find($id);
+        if (!$this->data['pegawai']) {
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound('Pegawai tidak ditemukan');
         }
 
-        $data['jabatan'] = $jabatanModel->getJabatan($data['pegawai']['id_jabatan']);
+        $this->data['jabatan'] = $jabatanModel->getJabatan($this->data['pegawai']['id_jabatan']);
         // Logic to show employee details
-        return view('admin/pegawai/detail_pegawai', $data);
+        return view('admin/pegawai/detail_pegawai', $this->data);
     }
 }
