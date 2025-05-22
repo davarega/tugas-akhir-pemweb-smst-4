@@ -372,7 +372,7 @@ class Model extends BaseModel
             } elseif ($this->db->getPlatform() === 'OCI8') {
                 $allFields = $this->db->protectIdentifiers(
                     array_map(
-                        static fn ($row) => $row->name,
+                        static fn($row) => $row->name,
                         $this->db->getFieldData($this->table),
                     ),
                     false,

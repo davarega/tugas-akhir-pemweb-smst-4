@@ -40,7 +40,7 @@
 						<div tabindex="0" role="button" class="btn btn-ghost max-w-52">
 							<div class="avatar">
 								<div class="w-10 rounded-full">
-									<img alt="Tailwind CSS Navbar component" src="/img/usersProfile/temp_profile.jpeg" />
+									<img alt="Tailwind CSS Navbar component" src="<?= $user['foto']; ?>" />
 								</div>
 							</div>
 							<span class="ml-2 font-bold truncate"><?= $user['nama_lengkap']; ?></span>

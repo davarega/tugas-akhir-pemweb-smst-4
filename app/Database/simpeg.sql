@@ -14,6 +14,21 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Dumping structure for table simpeg.jabatan
+CREATE TABLE IF NOT EXISTS `jabatan` (
+  `id_jabatan` int NOT NULL AUTO_INCREMENT,
+  `nama_jabatan` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  PRIMARY KEY (`id_jabatan`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dumping data for table simpeg.jabatan: ~3 rows (approximately)
+DELETE FROM `jabatan`;
+INSERT INTO `jabatan` (`id_jabatan`, `nama_jabatan`) VALUES
+	(1, 'Manager'),
+	(2, 'Staff'),
+	(3, 'Intern');
+
 -- Dumping structure for table simpeg.migrations
 CREATE TABLE IF NOT EXISTS `migrations` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
@@ -24,28 +39,18 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `time` int NOT NULL,
   `batch` int unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table simpeg.migrations: ~2 rows (approximately)
+-- Dumping data for table simpeg.migrations: ~3 rows (approximately)
 DELETE FROM `migrations`;
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
-	(1, '2025-05-16-115948', 'App\\Database\\Migrations\\CreateJabatanTable', 'default', 'App', 1747486238, 1),
-	(2, '2025-05-16-120000', 'App\\Database\\Migrations\\CreatePegawaiTable', 'default', 'App', 1747486238, 1),
-	(3, '2025-05-16-120105', 'App\\Database\\Migrations\\CreateCutiTable', 'default', 'App', 1747486238, 1);
-
--- Dumping structure for table simpeg.jabatan
-CREATE TABLE IF NOT EXISTS `jabatan` (
-  `id_jabatan` int NOT NULL AUTO_INCREMENT,
-  `nama_jabatan` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id_jabatan`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Dumping data for table simpeg.jabatan: ~0 rows (approximately)
-DELETE FROM `jabatan`;
+	(7, '2025-05-16-115948', 'App\\Database\\Migrations\\CreateJabatanTable', 'default', 'App', 1747664574, 1),
+	(8, '2025-05-16-120000', 'App\\Database\\Migrations\\CreatePegawaiTable', 'default', 'App', 1747664574, 1),
+	(9, '2025-05-16-120105', 'App\\Database\\Migrations\\CreateCutiTable', 'default', 'App', 1747664574, 1);
 
 -- Dumping structure for table simpeg.pegawai
 CREATE TABLE IF NOT EXISTS `pegawai` (
-  `id_pegawai` int NOT NULL AUTO_INCREMENT,
+  `id_pegawai` char(10) COLLATE utf8mb4_general_ci NOT NULL,
   `nama_lengkap` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
@@ -64,13 +69,16 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
   CONSTRAINT `pegawai_id_jabatan_foreign` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan` (`id_jabatan`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table simpeg.pegawai: ~0 rows (approximately)
+-- Dumping data for table simpeg.pegawai: ~2 rows (approximately)
 DELETE FROM `pegawai`;
+INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES
+	('2303040098', 'Mochamad Faishal Rafi', 'namarafi123@gmail.com', '$2y$12$Jx33ge6lqRad3Lf0wp0rQePHmGi/CoQk1RSJV6IKhxDTd.bm8QeNC', 1, 'Banyumas', '2005-09-29', 'L', 'Jl. Raya No. 123', '081234567890', '/img/usersProfile/default.jpg', 'admin'),
+	('2303040099', 'Mochamad Faishal', 'a@gmail.com', '$2y$12$gyh3EpfxBHbaZZoHg9db1.H1QhnzSVqxuaHovxyIe1nFrf9FZvlDC', 1, 'Banyumas', '2005-09-29', 'L', 'Jl. Raya No. 123', '08123456789', '/img/usersProfile/default.jpg', 'pegawai');
 
 -- Dumping structure for table simpeg.cuti
 CREATE TABLE IF NOT EXISTS `cuti` (
   `id_cuti` int NOT NULL AUTO_INCREMENT,
-  `id_pegawai` int NOT NULL,
+  `id_pegawai` char(10) COLLATE utf8mb4_general_ci NOT NULL,
   `tanggal_mulai` date NOT NULL,
   `tanggal_selesai` date NOT NULL,
   `jenis` enum('tahunan','sakit','ijin','melahirkan','lainnya') COLLATE utf8mb4_general_ci NOT NULL,

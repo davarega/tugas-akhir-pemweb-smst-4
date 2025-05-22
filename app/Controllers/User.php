@@ -21,4 +21,13 @@ class User extends BaseController
         ];
         return view('user/dashboard/dashboard', $data);
     }
+
+    public function jadwal()
+    {
+        return view('user/jadwal/jadwal', [
+            'title' => 'Jadwal',
+            'active' => 'Jadwal',
+            'user' => session()->get('user'),
+        ]);
+    }
 }

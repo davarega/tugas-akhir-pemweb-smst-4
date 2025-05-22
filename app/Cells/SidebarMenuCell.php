@@ -12,12 +12,15 @@ class SidebarMenuCell extends Cell
         $role = $pegawai['role'] ?? 'pegawai';
 
         $menu = [];
+        $submenu = [];
 
         if ($role === 'admin') {
             $menu = [
-                ['title' => 'Dashboard', 'url' => "/admin/dashboard", 'icon' => 'bi-columns-gap'],
-                ['title' => 'Pegawai', 'url' => "/admin/dashboard/pegawai", 'icon' => 'bi-people'],
-                ['title' => 'Jadwal', 'url' => '/admin/dashboard/jadwal', 'icon' => 'bi-calendar-event'],
+                ['title' => 'Dashboard', 'url' => "/admin", 'icon' => 'bi-columns-gap'],
+                ['title' => 'Pegawai', 'url' => "/admin/pegawai", 'icon' => 'bi-people'],
+                ['title' => 'Jadwal', 'url' => '/admin/jadwal', 'icon' => 'bi-calendar-event'],
+                ['title' => 'Cuti', 'url' => '/admin/cuti', 'icon' => 'bi-calendar-check'],
+                ['title' => 'Jabatan', 'url' => '/admin/jabatan', 'icon' => 'bi-person-badge'],
             ];
         } else {
             $menu = [

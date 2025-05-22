@@ -3,9 +3,23 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\PegawaiModel;
 
 class Admin extends BaseController
 {
+	protected $user;
+	protected $data = [];
+
+	public function __construct()
+	{
+		$this->user = session()->get('user');
+
+		$this->data = [
+			// 'sidebarMenu' => $this->adminSidebarMenu,
+			'user' => $this->user,
+		];
+	}
+
 	public function index()
 	{
 		$user = session()->get('user');
@@ -18,13 +32,10 @@ class Admin extends BaseController
 			return redirect()->to('/dashboard');
 		}
 
-		$data = [
-			'title' => 'Dashboard',
-			'active' => 'Dashboard',
-			'user' => $user,
-			'pegawai' => new \App\Models\PegawaiModel()->findAll(),
-		];
+		$this->data['title'] = 'Dashboard';
+		$this->data['active'] = 'Dashboard';
+		$this->data['pegawai'] = (new PegawaiModel())->findAll();
 
-		return view('admin/dashboard/dashboard', $data);
+		return view('admin/dashboard/dashboard', $this->data);
 	}
 }

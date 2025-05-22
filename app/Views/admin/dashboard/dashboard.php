@@ -44,7 +44,7 @@
 			<div class="card bg-base-100 shadow">
 				<div class="flex justify-between p-4 pb-0">
 					<h2 class="text-lg font-semibold">Statistik Pegawai</h2>
-					<a href="<?= base_url('/admin/dashboard/pegawai'); ?>" class="btn btn-primary text-primary-content btn-sm">Lihat Semua</a>
+					<a href="<?= base_url('/admin/pegawai'); ?>" class="btn btn-primary text-primary-content btn-sm">Lihat Semua</a>
 				</div>
 				<div class="divider px-4"></div>
 				<div class="overflow-x-auto rounded-box shadow">

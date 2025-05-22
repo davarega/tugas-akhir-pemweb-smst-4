@@ -1,0 +1,1239 @@
+DEBUG - 2025-05-22 00:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:06:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:08:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:09:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:09:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 00:11:47 --> TypeError: Unsupported operand types: string + string
+[Method: GET, Route: admin/pegawai/2303040098]
+in APPPATH\Views\admin\pegawai\detail_pegawai.php on line 13.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/detail_pegawai', [], true)
+ 4 APPPATH\Controllers\Pegawai.php(64): view('admin/pegawai/detail_pegawai', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->show('2303040098')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 00:11:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 00:11:55 --> ParseError: syntax error, unexpected token ","
+[Method: GET, Route: admin/pegawai/2303040098]
+in APPPATH\Views\admin\pegawai\detail_pegawai.php on line 13.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/detail_pegawai', [], true)
+ 3 APPPATH\Controllers\Pegawai.php(64): view('admin/pegawai/detail_pegawai', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->show('2303040098')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 00:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:22:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:23:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 00:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:42:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 01:44:53 --> ErrorException: Undefined variable $jabatans
+[Method: GET, Route: admin/pegawai/create]
+in APPPATH\Views\admin\pegawai\tambah_pegawai.php on line 28.
+ 1 APPPATH\Views\admin\pegawai\tambah_pegawai.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jabatans', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\tambah_pegawai.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\tambah_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/tambah_pegawai', [], true)
+ 5 APPPATH\Controllers\Pegawai.php(71): view('admin/pegawai/tambah_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 01:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 01:46:19 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/pegawai/create]
+in APPPATH\Views\admin\pegawai\tambah_pegawai.php on line 29.
+ 1 APPPATH\Views\admin\pegawai\tambah_pegawai.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\tambah_pegawai.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\tambah_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/tambah_pegawai', [], true)
+ 5 APPPATH\Controllers\Pegawai.php(72): view('admin/pegawai/tambah_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 01:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:46:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-22 01:46:46 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/pegawai/create]
+in APPPATH\Views\admin\pegawai\tambah_pegawai.php on line 29.
+ 1 APPPATH\Views\admin\pegawai\tambah_pegawai.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\tambah_pegawai.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\admin\\pegawai\\tambah_pegawai.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pegawai/tambah_pegawai', [], true)
+ 5 APPPATH\Controllers\Pegawai.php(74): view('admin/pegawai/tambah_pegawai', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 01:47:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 01:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 01:56:09 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 01:56:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 01:56:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 01:56:09 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 01:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:01:03 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:01:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:01:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:01:03 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:06:59 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:06:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:06:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:06:59 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:09:10 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:09:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:09:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:09:10 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:09:13 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:09:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:09:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:09:13 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'3\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('3', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('3', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '3', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:09:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-22 02:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:10:12 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:10:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:10:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:10:12 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:16:12 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:16:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:16:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:16:12 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:16:58 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:16:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:16:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:16:58 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:17:32 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:17:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:17:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:17:32 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:17:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:17:44 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:17:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:17:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:17:44 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-22 02:18:34 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', Array)
+#6 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', Array, NULL, 'id_jabatan')
+#7 D:\apps\laragon\www\simpeg\system\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', Array, Array, 'id_jabatan')
+#8 D:\apps\laragon\www\simpeg\system\Controller.php(138): CodeIgniter\Validation\Validation->run()
+#9 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate(Array, Array)
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#11 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#12 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#14 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#17 {main}
+CRITICAL - 2025-05-22 02:18:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 4 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 5 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 6 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:18:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 6 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 7 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 8 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-05-22 02:18:34 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `jabatan`
+WHERE `id` = \'1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `jabatan`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\StrictRules\Rules.php(148): CodeIgniter\Validation\Rules->is_not_unique('1', 'jabatan.id', [...])
+ 7 SYSTEMPATH\Validation\Validation.php(336): CodeIgniter\Validation\StrictRules\Rules->is_not_unique('1', 'jabatan.id', [...], null, 'id_jabatan')
+ 8 SYSTEMPATH\Validation\Validation.php(201): CodeIgniter\Validation\Validation->processRules('id_jabatan', 'id_jabatan', '1', [...], [...], 'id_jabatan')
+ 9 SYSTEMPATH\Controller.php(138): CodeIgniter\Validation\Validation->run()
+10 APPPATH\Controllers\Pegawai.php(83): CodeIgniter\Controller->validate([...], [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+17 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-22 02:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
