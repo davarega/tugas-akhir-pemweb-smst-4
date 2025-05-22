@@ -14,7 +14,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
 -- Dumping structure for table simpeg.jabatan
 CREATE TABLE IF NOT EXISTS `jabatan` (
   `id_jabatan` int NOT NULL AUTO_INCREMENT,
@@ -39,14 +38,14 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `time` int NOT NULL,
   `batch` int unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table simpeg.migrations: ~3 rows (approximately)
 DELETE FROM `migrations`;
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
-	(7, '2025-05-16-115948', 'App\\Database\\Migrations\\CreateJabatanTable', 'default', 'App', 1747664574, 1),
-	(8, '2025-05-16-120000', 'App\\Database\\Migrations\\CreatePegawaiTable', 'default', 'App', 1747664574, 1),
-	(9, '2025-05-16-120105', 'App\\Database\\Migrations\\CreateCutiTable', 'default', 'App', 1747664574, 1);
+	(10, '2025-05-16-115948', 'App\\Database\\Migrations\\CreateJabatanTable', 'default', 'App', 1747813699, 1),
+	(11, '2025-05-16-120000', 'App\\Database\\Migrations\\CreatePegawaiTable', 'default', 'App', 1747814113, 1),
+	(12, '2025-05-16-120105', 'App\\Database\\Migrations\\CreateCutiTable', 'default', 'App', 1747814113, 1);
 
 -- Dumping structure for table simpeg.pegawai
 CREATE TABLE IF NOT EXISTS `pegawai` (
@@ -69,11 +68,12 @@ CREATE TABLE IF NOT EXISTS `pegawai` (
   CONSTRAINT `pegawai_id_jabatan_foreign` FOREIGN KEY (`id_jabatan`) REFERENCES `jabatan` (`id_jabatan`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table simpeg.pegawai: ~2 rows (approximately)
+-- Dumping data for table simpeg.pegawai: ~3 rows (approximately)
 DELETE FROM `pegawai`;
 INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES
-	('2303040098', 'Mochamad Faishal Rafi', 'namarafi123@gmail.com', '$2y$12$Jx33ge6lqRad3Lf0wp0rQePHmGi/CoQk1RSJV6IKhxDTd.bm8QeNC', 1, 'Banyumas', '2005-09-29', 'L', 'Jl. Raya No. 123', '081234567890', '/img/usersProfile/default.jpg', 'admin'),
-	('2303040099', 'Mochamad Faishal', 'a@gmail.com', '$2y$12$gyh3EpfxBHbaZZoHg9db1.H1QhnzSVqxuaHovxyIe1nFrf9FZvlDC', 1, 'Banyumas', '2005-09-29', 'L', 'Jl. Raya No. 123', '08123456789', '/img/usersProfile/default.jpg', 'pegawai');
+	('2303040097', 'Sal Rafi', '1234567890@gmail.com', '$2y$12$y.ErbwoQlZHoOT.voNVUyOr9YDW4Ep4aKYbBeoA9knQqlvSFmlib2', 3, 'Ajibarang', '2025-05-21', 'L', 'lapang', '0895358263629', '/img/usersProfile/1747894181_c329d0a76f048a7f0dee.jpg', 'pegawai'),
+	('2303040098', 'Mochamad Faishal Rafi', 'namarafi123@gmail.com', '$2y$12$puZVUjMObrUICAfJwTfSXOrTii/kwYgjRUj.8wHcbwY/zocfhb3da', 1, 'Banyumas', '2005-09-29', 'L', 'Jl. Raya No. 123', '081234567890', '/img/usersProfile/user1.jpeg', 'admin'),
+	('2303040099', 'Faishal Rafi', 'a@gmail.com', '$2y$12$i8BA8.oNUbKyZWioX7ymk./JH/sOv7Ft5IbFhcwWgE7N2gRX/smfC', 1, 'Banyumas', '2005-09-29', 'L', 'Jl. Raya No. 123', '08123456789', '/img/usersProfile/defaul.jpg', 'pegawai');
 
 -- Dumping structure for table simpeg.cuti
 CREATE TABLE IF NOT EXISTS `cuti` (
@@ -87,10 +87,12 @@ CREATE TABLE IF NOT EXISTS `cuti` (
   PRIMARY KEY (`id_cuti`),
   KEY `cuti_id_pegawai_foreign` (`id_pegawai`),
   CONSTRAINT `cuti_id_pegawai_foreign` FOREIGN KEY (`id_pegawai`) REFERENCES `pegawai` (`id_pegawai`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping data for table simpeg.cuti: ~0 rows (approximately)
+-- Dumping data for table simpeg.cuti: ~1 rows (approximately)
 DELETE FROM `cuti`;
+INSERT INTO `cuti` (`id_cuti`, `id_pegawai`, `tanggal_mulai`, `tanggal_selesai`, `jenis`, `keterangan`, `status`) VALUES
+	(1, '2303040099', '2025-05-07', '2025-05-22', 'sakit', 'demam tinggi', 'diajukan');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
