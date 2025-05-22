@@ -1,0 +1,154 @@
+CRITICAL - 2025-05-18 05:48:29 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Controllers\Admin.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pegawai()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 05:58:58 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 9.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php', 9)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 05:59:22 --> Error: Attempt to assign property "name" on null
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 9.
+ 1 SYSTEMPATH\View\View.php(224): include()
+ 2 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 3 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 4 APPPATH\Controllers\User.php(35): view('user/dashboard/dashboard', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 05:59:29 --> ParseError: syntax error, unexpected token ":", expecting "," or ";"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 9.
+ 1 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 3 APPPATH\Controllers\User.php(35): view('user/dashboard/dashboard', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 06:02:32 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 16.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 06:02:37 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 16.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php', 16)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 06:05:34 --> ErrorException: Undefined variable $user
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 17.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php', 17)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(35): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 23:47:25 --> Error: Call to a member function findAll() on null
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Controllers\Admin.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pegawai()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-18 23:54:30 --> ErrorException: Undefined variable $sidebar
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Views\layouts\dashboard_template.php on line 31.
+ 1 APPPATH\Views\layouts\dashboard_template.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sidebar', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 6 APPPATH\Controllers\Pegawai.php(12): view('admin/dashboard/pegawai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 23:55:32 --> ErrorException: Undefined variable $sidebar
+[Method: GET, Route: admin/dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 31.
+ 1 APPPATH\Views\layouts\dashboard_template.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sidebar', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Admin.php(47): view('admin/dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-18 23:55:55 --> ErrorException: Undefined variable $sidebarMenu
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Views\layouts\dashboard_template.php on line 31.
+ 1 APPPATH\Views\layouts\dashboard_template.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sidebarMenu', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 31)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 6 APPPATH\Controllers\Pegawai.php(12): view('admin/dashboard/pegawai')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')

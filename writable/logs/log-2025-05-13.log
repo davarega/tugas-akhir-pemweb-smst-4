@@ -1,0 +1,357 @@
+ERROR - 2025-05-13 10:37:47 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(31): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-13 10:38:57 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(31): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-05-13 11:30:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-13 11:30:54 --> mysqli_sql_exception: Unknown table 'users' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `users`....', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`....')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`....')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`....', Array, false)
+#4 D:\apps\laragon\www\framework-4.6.1\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\framework-4.6.1\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 D:\apps\laragon\www\framework-4.6.1\app\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+#7 D:\apps\laragon\www\framework-4.6.1\app\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+#8 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+#9 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\apps\laragon\www\framework-4.6.1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\apps\laragon\www\framework-4.6.1\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#15 {main}
+CRITICAL - 2025-05-13 11:30:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'users'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-13 11:30:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-13 11:30:54 --> [Caused by] mysqli_sql_exception: Unknown table 'users'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `users`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `users`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+DEBUG - 2025-05-13 11:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-13 11:34:01 --> mysqli_sql_exception: Unknown table 'uses' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uses`.*...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uses`.*...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uses`.*...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*...', Array, false)
+#4 D:\apps\laragon\www\framework-4.6.1\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\framework-4.6.1\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 D:\apps\laragon\www\framework-4.6.1\app\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+#7 D:\apps\laragon\www\framework-4.6.1\app\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+#8 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+#9 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\apps\laragon\www\framework-4.6.1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\apps\laragon\www\framework-4.6.1\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#15 {main}
+CRITICAL - 2025-05-13 11:34:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'uses'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-13 11:34:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'uses'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-13 11:34:01 --> [Caused by] mysqli_sql_exception: Unknown table 'uses'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+DEBUG - 2025-05-13 11:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:34:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-13 11:34:06 --> mysqli_sql_exception: Unknown table 'uses' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uses`.*...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uses`.*...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uses`.*...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*...', Array, false)
+#4 D:\apps\laragon\www\framework-4.6.1\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\framework-4.6.1\system\BaseModel.php(717): CodeIgniter\Model->doFirst()
+#6 D:\apps\laragon\www\framework-4.6.1\app\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+#7 D:\apps\laragon\www\framework-4.6.1\app\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+#8 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+#9 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\apps\laragon\www\framework-4.6.1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\apps\laragon\www\framework-4.6.1\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#15 {main}
+CRITICAL - 2025-05-13 11:34:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'uses'
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-13 11:34:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'uses'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-13 11:34:06 --> [Caused by] mysqli_sql_exception: Unknown table 'uses'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = \'123123\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `uses`.*, `pegawai`.`nip`, `pegawai`.`nama_lengkap`
+FROM `user`
+JOIN `pegawai` ON `pegawai`.`id` = `user`.`pegawai_id`
+WHERE `pegawai`.`nip` = :pegawai.nip:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(717): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\UserModel.php(27): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\Auth.php(22): App\Models\UserModel->getUserByNIP('123123')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->attemptLogin()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+DEBUG - 2025-05-13 11:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-13 11:41:49 --> mysqli_sql_exception: Duplicate entry '1234567890' for key 'pegawai.nip' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Seeds\PegawaiSeeder.php(27): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\Seeder.php(149): App\Database\Seeds\PegawaiSeeder->run()
+#6 D:\apps\laragon\www\framework-4.6.1\app\Database\Seeds\DatabaseSeeder.php(11): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 D:\apps\laragon\www\framework-4.6.1\system\Database\Seeder.php(149): App\Database\Seeds\DatabaseSeeder->run()
+#8 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#12 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#13 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#14 {main}
+DEBUG - 2025-05-13 11:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-13 11:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,535 @@
+DEBUG - 2025-05-20 00:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:05:37 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/pegawai]
+in APPPATH\Views\layouts\dashboard_template.php on line 54.
+ 1 APPPATH\Views\layouts\dashboard_template.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php', 54)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 6 APPPATH\Controllers\Pegawai.php(43): view('admin/dashboard/pegawai', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:07:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 00:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:25:37 --> ErrorException: Undefined variable $user
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Views\layouts\dashboard_template.php on line 54.
+ 1 APPPATH\Views\layouts\dashboard_template.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $user', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php', 54)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 6 APPPATH\Controllers\Pegawai.php(43): view('admin/dashboard/pegawai', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+WARNING - 2025-05-20 00:45:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pages::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:45:27 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:45:53 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:46:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:46:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:47:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:47:00 --> ErrorException: New expressions are not supported in this context
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Controllers\Pegawai.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-05-20 00:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:47:34 --> ErrorException: New expressions are not supported in this context
+[Method: GET, Route: admin/dashboard/pegawai]
+in APPPATH\Controllers\Pegawai.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-05-20 00:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pegawai::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:24 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:25 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pegawai::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:28 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:29 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pegawai::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:32 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:33 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pegawai::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:49:35 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:50:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:51:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:51:20 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pegawai::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:51:21 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:52:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-05-20 00:52:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Pegawai::$adminSidebarMenu is deprecated in APPPATH\Controllers\BaseController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:58:13 --> ErrorException: Undefined property: App\Controllers\Pegawai::$adminSidebarMenu
+[Method: GET, Route: admin/dashboard/pegawai/]
+in APPPATH\Controllers\Pegawai.php on line 17.
+ 1 APPPATH\Controllers\Pegawai.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Pegawai::$adminSidebarMenu', 'D:\\apps\\laragon\\www\\simpeg\\app\\Controllers\\Pegawai.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Pegawai->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 00:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:58:44 --> ErrorException: Constant expression contains invalid operations
+[Method: GET, Route: admin/dashboard/pegawai/]
+in APPPATH\Controllers\Pegawai.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-05-20 00:58:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:58:57 --> ErrorException: Constant expression contains invalid operations
+[Method: GET, Route: admin/dashboard/pegawai/]
+in APPPATH\Controllers\Pegawai.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-05-20 00:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 00:59:09 --> ErrorException: Constant expression contains invalid operations
+[Method: GET, Route: admin/dashboard/pegawai/]
+in APPPATH\Controllers\Pegawai.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-05-20 01:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:01:02 --> ErrorException: Undefined property: App\Controllers\Pegawai::$adminSidebarMenu
+[Method: GET, Route: admin/dashboard/pegawai/]
+in APPPATH\Controllers\Pegawai.php on line 18.
+ 1 APPPATH\Controllers\Pegawai.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Pegawai::$adminSidebarMenu', 'D:\\apps\\laragon\\www\\simpeg\\app\\Controllers\\Pegawai.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Pegawai->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:12:06 --> ErrorException: Undefined property: App\Controllers\Pegawai::$adminSidebarMenu
+[Method: GET, Route: admin/dashboard/pegawai/]
+in APPPATH\Controllers\Pegawai.php on line 18.
+ 1 APPPATH\Controllers\Pegawai.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Pegawai::$adminSidebarMenu', 'D:\\apps\\laragon\\www\\simpeg\\app\\Controllers\\Pegawai.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Pegawai->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:12:27 --> CodeIgniter\View\Exceptions\ViewException: Unable to locate view cell class: "App/Cells/SidebarMenuCell".
+[Method: GET, Route: admin/dashboard/pegawai/]
+in SYSTEMPATH\View\Cell.php on line 189.
+ 1 SYSTEMPATH\View\Cell.php(189): CodeIgniter\View\Exceptions\ViewException::forInvalidCellClass('App/Cells/SidebarMenuCell')
+ 2 SYSTEMPATH\View\Cell.php(79): CodeIgniter\View\Cell->determineClass('App/Cells/SidebarMenuCell:show')
+ 3 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('App/Cells/SidebarMenuCell::show', null, 0, null)
+ 4 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('App/Cells/SidebarMenuCell::show')
+ 5 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 6 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 7 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 9 APPPATH\Controllers\Pegawai.php(29): view('admin/dashboard/pegawai', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:13:43 --> CodeIgniter\View\Exceptions\ViewException: Unable to locate view cell class: "App/Cells/SidebarMenuCell".
+[Method: GET, Route: admin/dashboard/pegawai/]
+in SYSTEMPATH\View\Cell.php on line 189.
+ 1 SYSTEMPATH\View\Cell.php(189): CodeIgniter\View\Exceptions\ViewException::forInvalidCellClass('App/Cells/SidebarMenuCell')
+ 2 SYSTEMPATH\View\Cell.php(79): CodeIgniter\View\Cell->determineClass('App/Cells/SidebarMenuCell:show')
+ 3 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('App/Cells/SidebarMenuCell::show', null, 0, null)
+ 4 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('App/Cells/SidebarMenuCell::show')
+ 5 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 6 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 7 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 9 APPPATH\Controllers\Pegawai.php(29): view('admin/dashboard/pegawai', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:14:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Cells/sidebar.php"
+[Method: GET, Route: admin/dashboard/pegawai/]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Cells/sidebar.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Cells/sidebar', [], true)
+ 3 APPPATH\Cells\SidebarMenuCell.php(29): view('Cells/sidebar', [...])
+ 4 SYSTEMPATH\View\Cell.php(233): App\Cells\SidebarMenuCell->show()
+ 5 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderCell(Object(App\Cells\SidebarMenuCell), 'show', [])
+ 6 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('SidebarMenuCell::show', [], 0, 'AppCellsSidebarMenuCellshow40cd750bba9870f18aada2478b24840a')
+ 7 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('SidebarMenuCell::show')
+ 8 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 9 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+10 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+11 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+12 APPPATH\Controllers\Pegawai.php(29): view('admin/dashboard/pegawai', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+19 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:14:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Cells/sidebar_menu.php"
+[Method: GET, Route: admin/dashboard/pegawai/]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Cells/sidebar_menu.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Cells/sidebar_menu', [], true)
+ 3 APPPATH\Cells\SidebarMenuCell.php(29): view('Cells/sidebar_menu', [...])
+ 4 SYSTEMPATH\View\Cell.php(233): App\Cells\SidebarMenuCell->show()
+ 5 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderCell(Object(App\Cells\SidebarMenuCell), 'show', [])
+ 6 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('SidebarMenuCell::show', [], 0, 'AppCellsSidebarMenuCellshow40cd750bba9870f18aada2478b24840a')
+ 7 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('SidebarMenuCell::show')
+ 8 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 9 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+10 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+11 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+12 APPPATH\Controllers\Pegawai.php(29): view('admin/dashboard/pegawai', [...])
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+19 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:16:33 --> TypeError: CodeIgniter\View\Cell::renderCell(): Return value must be of type string, array returned
+[Method: GET, Route: admin/dashboard/pegawai/]
+in SYSTEMPATH\View\Cell.php on line 233.
+ 1 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderCell(Object(App\Cells\SidebarMenuCell), 'show', [])
+ 2 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('SidebarMenuCell::show', [], 0, 'AppCellsSidebarMenuCellshow40cd750bba9870f18aada2478b24840a')
+ 3 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('SidebarMenuCell::show')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 8 APPPATH\Controllers\Pegawai.php(29): view('admin/dashboard/pegawai', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:17:38 --> TypeError: CodeIgniter\View\Cell::renderCell(): Return value must be of type string, array returned
+[Method: GET, Route: admin/dashboard/pegawai/]
+in SYSTEMPATH\View\Cell.php on line 233.
+ 1 SYSTEMPATH\View\Cell.php(103): CodeIgniter\View\Cell->renderCell(Object(App\Cells\SidebarMenuCell), 'show', [])
+ 2 SYSTEMPATH\Common.php(1189): CodeIgniter\View\Cell->render('SidebarMenuCell::show', [], 0, 'AppCellsSidebarMenuCellshow40cd750bba9870f18aada2478b24840a')
+ 3 APPPATH\Views\layouts\dashboard_template.php(30): view_cell('SidebarMenuCell::show')
+ 4 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\layouts\\dashboard_template.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 6 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 7 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/dashboard/pegawai', [], true)
+ 8 APPPATH\Controllers\Pegawai.php(29): view('admin/dashboard/pegawai', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->index()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-20 01:23:37 --> ErrorException: Undefined property: App\Controllers\Admin::$adminSidebarMenu
+[Method: GET, Route: admin]
+in APPPATH\Controllers\Admin.php on line 24.
+ 1 APPPATH\Controllers\Admin.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$adminSidebarMenu', 'D:\\apps\\laragon\\www\\simpeg\\app\\Controllers\\Admin.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 01:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:24:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 01:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-20 02:59:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'simpeg', 3306, '', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\apps\laragon\www\simpeg\app\Controllers\Admin.php(25): CodeIgniter\BaseModel->findAll()
+#7 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Admin->index()
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\apps\laragon\www\simpeg\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\apps\laragon\www\simpeg\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\apps\laragon\www\simpeg\app\Controllers\Admin.php(25): CodeIgniter\BaseModel->findAll()
+#6 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Admin->index()
+#7 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#13 {main}
+CRITICAL - 2025-05-20 02:59:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pegawai`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Admin.php(25): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 02:59:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-20 02:59:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'simpeg', 3306, '', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\simpeg\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\apps\laragon\www\simpeg\app\Controllers\Admin.php(25): CodeIgniter\BaseModel->findAll()
+#7 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Admin->index()
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#9 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\apps\laragon\www\simpeg\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\apps\laragon\www\simpeg\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\apps\laragon\www\simpeg\app\Controllers\Admin.php(25): CodeIgniter\BaseModel->findAll()
+#6 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Admin->index()
+#7 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#13 {main}
+CRITICAL - 2025-05-20 02:59:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: admin/dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pegawai`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Admin.php(25): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-05-20 02:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 02:59:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:02:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-20 03:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

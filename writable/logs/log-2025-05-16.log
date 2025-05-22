@@ -1,0 +1,591 @@
+ERROR - 2025-05-16 00:05:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'ukel2b1'@'localhost' (using password: YES) in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('127.0.0.1', 'ukel2b1', Object(SensitiveParameterValue), 'dbukel2b1', 3306, '', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\apps\laragon\www\framework-4.6.1\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\apps\laragon\www\framework-4.6.1\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\apps\laragon\www\framework-4.6.1\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#7 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#8 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#9 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\apps\laragon\www\framework-4.6.1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\apps\laragon\www\framework-4.6.1\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\apps\laragon\www\framework-4.6.1\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\apps\laragon\www\framework-4.6.1\system\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\apps\laragon\www\framework-4.6.1\app\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+#6 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+#7 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#8 D:\apps\laragon\www\framework-4.6.1\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\apps\laragon\www\framework-4.6.1\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\apps\laragon\www\framework-4.6.1\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#13 {main}
+CRITICAL - 2025-05-16 00:05:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pegawai`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(679): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Dashboard.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:06:52 --> ErrorException: Undefined variable $sidebar
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 27.
+ 1 APPPATH\Views\layouts\dashboard_template.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sidebar', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(21): view('dashboard/dashboard')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:07:49 --> ErrorException: Undefined variable $sidebar
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 27.
+ 1 APPPATH\Views\layouts\dashboard_template.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sidebar', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(25): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:07:51 --> ErrorException: Undefined variable $sidebar
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 27.
+ 1 APPPATH\Views\layouts\dashboard_template.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sidebar', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(25): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:08:02 --> ErrorException: foreach() argument must be of type array|object, string given
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 27.
+ 1 APPPATH\Views\layouts\dashboard_template.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 27)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(25): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:08:55 --> ErrorException: Undefined variable $active
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 28.
+ 1 APPPATH\Views\layouts\dashboard_template.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(41): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:09:28 --> ErrorException: Undefined array key "title"
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 28.
+ 1 APPPATH\Views\layouts\dashboard_template.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(41): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:09:41 --> ErrorException: Undefined variable $active
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 28.
+ 1 APPPATH\Views\layouts\dashboard_template.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(44): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+CRITICAL - 2025-05-16 00:09:59 --> ErrorException: Undefined variable $active
+[Method: GET, Route: dashboard]
+in APPPATH\Views\layouts\dashboard_template.php on line 28.
+ 1 APPPATH\Views\layouts\dashboard_template.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $active', 'D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php', 28)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\framework-4.6.1\\app\\Views\\layouts\\dashboard_template.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layouts/dashboard_template', [], true)
+ 5 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/dashboard', [], true)
+ 6 APPPATH\Controllers\Dashboard.php(44): view('dashboard/dashboard', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+DEBUG - 2025-05-16 00:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 00:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 00:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 00:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 00:48:18 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/pegawai.php"
+[Method: GET, Route: dashboard/pegawai]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/pegawai.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('dashboard/pegawai', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(60): view('dashboard/pegawai', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->pegawai()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\framework-4.6.1\\public\\index.php')
+ERROR - 2025-05-16 11:44:07 --> mysqli_sql_exception: Failed to open the referenced table 'pegawai' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-114003_CreateCutiTable.php(30): CodeIgniter\Database\Forge->createTable('cuti')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCutiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:45:56 --> mysqli_sql_exception: Failed to open the referenced table 'pegawai' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-114003_CreateCutiTable.php(30): CodeIgniter\Database\Forge->createTable('cuti')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCutiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:49:09 --> mysqli_sql_exception: Failed to open the referenced table 'pegawai' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-114003_CreateCutiTable.php(30): CodeIgniter\Database\Forge->createTable('cuti')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCutiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:50:19 --> mysqli_sql_exception: Failed to open the referenced table 'pegawai' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `c...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `c...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `c...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `c...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-114003_CreateCutiTable.php(30): CodeIgniter\Database\Forge->createTable('cuti')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateCutiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:53:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL,
+	`role` ENUM('admin','pegawai') NOT NULL DEFAULT 'pegawai',
+	`created_at` ' at line 12 in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(36): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:54:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL,
+	`role` ENUM('admin','pegawai') NOT NULL DEFAULT 'pegawai',
+	`created_at` ' at line 12 in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(36): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:54:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL,
+	`role` ENUM('admin','pegawai') NOT NULL DEFAULT 'pegawai',
+	`created_at` ' at line 12 in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(36): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:55:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL,
+	`role` ENUM('admin','pegawai') NULL DEFAULT 'pegawai',
+	`created_at` TIME' at line 12 in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(36): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 11:57:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NULL,
+	`role` ENUM('admin','pegawai') NOT NULL DEFAULT 'pegawai',
+	`created_at` ' at line 12 in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-13-101930_CreatePegawaiTable.php(36): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 12:00:59 --> mysqli_sql_exception: Failed to open the referenced table 'jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-120000_CreatePegawaiTable.php(27): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 12:02:02 --> mysqli_sql_exception: Failed to open the referenced table 'jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-120000_CreatePegawaiTable.php(27): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-05-16 12:02:43 --> mysqli_sql_exception: Failed to open the referenced table 'jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-120000_CreatePegawaiTable.php(27): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-05-16 12:02:52 --> mysqli_sql_exception: Failed to open the referenced table 'jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('CREATE TABLE `p...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-120000_CreatePegawaiTable.php(27): CodeIgniter\Database\Forge->createTable('pegawai')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreatePegawaiTable->up()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(182): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRefresh.php(87): CodeIgniter\CLI\BaseCommand->call('migrate', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-05-16 12:03:00 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-05-16 12:04:06 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-05-16 12:06:42 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\BaseCommand.php(119): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRefresh.php(86): CodeIgniter\CLI\BaseCommand->call('migrate:rollbac...', Array)
+#11 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRefresh->run(Array)
+#12 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:refresh', Array)
+#13 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#14 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#15 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#16 {main}
+ERROR - 2025-05-16 12:10:24 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 12:10:25 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 12:10:26 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 12:10:27 --> mysqli_sql_exception: Unknown table 'simpeg.jabatan' in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(327): mysqli->query('DROP TABLE `jab...', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `jab...')
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `jab...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `jab...')
+#4 D:\apps\laragon\www\framework-4.6.1\app\Database\Migrations\2025-05-16-115948_CreateJabatanTable.php(21): CodeIgniter\Database\Forge->dropTable('jabatan')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(876): App\Database\Migrations\CreateJabatanTable->down()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(289): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-16 12:10:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('127.0.0.1', 'root', Object(SensitiveParameterValue), 'simpeg', 3306, '', 0)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(646): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateStatus.php(115): CodeIgniter\Database\MigrationRunner->getHistory('')
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateStatus->run(Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:status', Array)
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#11 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\apps\laragon\www\framework-4.6.1\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\apps\laragon\www\framework-4.6.1\system\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\apps\laragon\www\framework-4.6.1\system\Database\MigrationRunner.php(646): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\apps\laragon\www\framework-4.6.1\system\Commands\Database\MigrateStatus.php(115): CodeIgniter\Database\MigrationRunner->getHistory('')
+#7 D:\apps\laragon\www\framework-4.6.1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateStatus->run(Array)
+#8 D:\apps\laragon\www\framework-4.6.1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:status', Array)
+#9 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#10 D:\apps\laragon\www\framework-4.6.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\apps\laragon\www\framework-4.6.1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-05-16 12:10:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: CLI, Route: migrate:status]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseConnection.php(1525): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FROM `simpeg`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(1545): CodeIgniter\Database\BaseConnection->listTables()
+ 4 SYSTEMPATH\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+ 5 SYSTEMPATH\Database\MigrationRunner.php(646): CodeIgniter\Database\MigrationRunner->ensureTable()
+ 6 SYSTEMPATH\Commands\Database\MigrateStatus.php(115): CodeIgniter\Database\MigrationRunner->getHistory('')
+ 7 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\MigrateStatus->run([])
+ 8 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate:status', [])
+ 9 SYSTEMPATH\Boot.php(360): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+11 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
