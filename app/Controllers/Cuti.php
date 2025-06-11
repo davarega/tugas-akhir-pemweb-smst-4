@@ -23,12 +23,13 @@ class Cuti extends BaseController
         ];
     }
 
-    public function index()
+    // untuk admin
+    public function a_index()
     {
         return view('admin/cuti/cuti', $this->data);
     }
 
-    public function show($id)
+    public function a_show($id)
     {
         // Use getCuti() with the given id.
         $this->data['cuti'] = (new CutiModel())->getCuti($id);
@@ -37,5 +38,37 @@ class Cuti extends BaseController
             return redirect()->to('/admin/cuti')->with('error', 'Data cuti tidak ditemukan');
         }
         return view('admin/cuti/detail_cuti', $this->data);
+    }
+
+    public function a_approve($id)
+    {
+        $cutiModel = new CutiModel();
+        if ($cutiModel->approveCuti($id)) {
+            return redirect()->to('/admin/cuti')->with('success', 'Cuti berhasil disetujui');
+        }
+        return redirect()->to('/admin/cuti')->with('error', 'Gagal menyetujui cuti');
+    }
+
+    public function a_reject($id)
+    {
+        $cutiModel = new CutiModel();
+        if ($cutiModel->rejectCuti($id)) {
+            return redirect()->to('/admin/cuti')->with('success', 'Cuti berhasil ditolak');
+        }
+        return redirect()->to('/admin/cuti')->with('error', 'Gagal menolak cuti');
+    }
+
+    // untuk user
+    public function u_index()
+    {
+        $this->data['cuti'] = (new CutiModel())->getCuti($this->user['id_pegawai']);
+
+        if ($this->data['cuti'] === null) {
+            $this->data['cuti'] = [];
+        }
+
+        dd($this->data['cuti']);
+
+        return view('user/cuti/cuti', $this->data);
     }
 }

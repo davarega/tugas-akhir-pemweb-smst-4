@@ -35,7 +35,7 @@ class Pegawai extends BaseController
             'tanggal_lahir' => 'required|valid_date',
             'jenis_kelamin' => 'required|in_list[L,P]',
             'alamat' => 'required|min_length[5]',
-            'nomor_hp' => 'required|regex_match[/^[0-9+]{10,15}$/]',
+            'nomor_hp' => 'required|regex_match[/^[0-9+]{10,15}$/]|is_unique[pegawai.nomor_hp]', // regex untuk nomor HP minimal 10 digit
             'foto' => 'uploaded[foto]|is_image[foto]|max_size[foto,1024]|mime_in[foto,image/jpg,image/jpeg,image/png]', // jika berupa URL string
             'role' => 'permit_empty|in_list[admin,pegawai]',
         ];
@@ -52,6 +52,7 @@ class Pegawai extends BaseController
                 'valid_email' => 'Email tidak valid',
             ],
             'nomor_hp' => [
+                'is_unique' => 'Nomor HP sudah terdaftar',
                 'regex_match' => 'Nomor HP harus berupa angka dan minimal 10 digit'
             ],
             'jenis_kelamin' => [

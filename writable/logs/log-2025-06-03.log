@@ -1,0 +1,266 @@
+DEBUG - 2025-06-03 11:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:03:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 11:06:26 --> mysqli_sql_exception: Duplicate entry '08123456789' for key 'pegawai.nomor_hp' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\apps\laragon\www\simpeg\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 D:\apps\laragon\www\simpeg\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(95): CodeIgniter\Model->insert(Array)
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#9 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#15 {main}
+CRITICAL - 2025-06-03 11:06:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '08123456789' for key 'pegawai.nomor_hp'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (:id_pegawai:, :nama_lengkap:, :email:, :password:, :id_jabatan:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :foto:, :role:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Pegawai.php(95): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-06-03 11:06:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '08123456789' for key 'pegawai.nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$G.M4XcraXV2qEicX/EjbGOhodWCpNNFevwQTi23qgNWNWdojf8WEu\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948785_595287d25b952fb57b1a.jpg\', \'pegawai\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$G.M4XcraXV2qEicX/EjbGOhodWCpNNFevwQTi23qgNWNWdojf8WEu\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948785_595287d25b952fb57b1a.jpg\', \'pegawai\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (:id_pegawai:, :nama_lengkap:, :email:, :password:, :id_jabatan:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :foto:, :role:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Pegawai.php(95): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-06-03 11:06:26 --> [Caused by] mysqli_sql_exception: Duplicate entry '08123456789' for key 'pegawai.nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$G.M4XcraXV2qEicX/EjbGOhodWCpNNFevwQTi23qgNWNWdojf8WEu\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948785_595287d25b952fb57b1a.jpg\', \'pegawai\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$G.M4XcraXV2qEicX/EjbGOhodWCpNNFevwQTi23qgNWNWdojf8WEu\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948785_595287d25b952fb57b1a.jpg\', \'pegawai\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$G.M4XcraXV2qEicX/EjbGOhodWCpNNFevwQTi23qgNWNWdojf8WEu\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948785_595287d25b952fb57b1a.jpg\', \'pegawai\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (:id_pegawai:, :nama_lengkap:, :email:, :password:, :id_jabatan:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :foto:, :role:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pegawai.php(95): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-06-03 11:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:08:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-03 11:08:22 --> mysqli_sql_exception: Duplicate entry '08123456789' for key 'pegawai.nomor_hp' in D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 D:\apps\laragon\www\simpeg\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pe...', 0)
+#1 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 D:\apps\laragon\www\simpeg\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 D:\apps\laragon\www\simpeg\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 D:\apps\laragon\www\simpeg\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\apps\laragon\www\simpeg\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#6 D:\apps\laragon\www\simpeg\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\apps\laragon\www\simpeg\app\Controllers\Pegawai.php(96): CodeIgniter\Model->insert(Array)
+#8 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+#9 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+#10 D:\apps\laragon\www\simpeg\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\apps\laragon\www\simpeg\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 D:\apps\laragon\www\simpeg\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 D:\apps\laragon\www\simpeg\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 D:\apps\laragon\www\simpeg\system\rewrite.php(44): require_once('D:\\apps\\laragon...')
+#15 {main}
+CRITICAL - 2025-06-03 11:08:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '08123456789' for key 'pegawai.nomor_hp'
+[Method: POST, Route: admin/pegawai/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (:id_pegawai:, :nama_lengkap:, :email:, :password:, :id_jabatan:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :foto:, :role:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Pegawai.php(96): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-06-03 11:08:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '08123456789' for key 'pegawai.nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$11W4wz8CHW.gkbcaMp9PeubBZoFcueb/IXs6fHQUprsLf1XcTHI2q\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948902_fcab2f018d465f5de6a8.jpg\', \'pegawai\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$11W4wz8CHW.gkbcaMp9PeubBZoFcueb/IXs6fHQUprsLf1XcTHI2q\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948902_fcab2f018d465f5de6a8.jpg\', \'pegawai\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (:id_pegawai:, :nama_lengkap:, :email:, :password:, :id_jabatan:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :foto:, :role:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Pegawai.php(96): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+CRITICAL - 2025-06-03 11:08:22 --> [Caused by] mysqli_sql_exception: Duplicate entry '08123456789' for key 'pegawai.nomor_hp'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$11W4wz8CHW.gkbcaMp9PeubBZoFcueb/IXs6fHQUprsLf1XcTHI2q\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948902_fcab2f018d465f5de6a8.jpg\', \'pegawai\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$11W4wz8CHW.gkbcaMp9PeubBZoFcueb/IXs6fHQUprsLf1XcTHI2q\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948902_fcab2f018d465f5de6a8.jpg\', \'pegawai\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (\'2303040072\', \'Luthfi Ramadhani\', \'luthfi@gmail.com\', \'$2y$12$11W4wz8CHW.gkbcaMp9PeubBZoFcueb/IXs6fHQUprsLf1XcTHI2q\', \'2\', \'Kroya\', \'2005-01-01\', \'L\', \'desa a Rt 1 Rw 2, kec Kroya\', \'08123456789\', \'/img/usersProfile/1748948902_fcab2f018d465f5de6a8.jpg\', \'pegawai\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pegawai` (`id_pegawai`, `nama_lengkap`, `email`, `password`, `id_jabatan`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `nomor_hp`, `foto`, `role`) VALUES (:id_pegawai:, :nama_lengkap:, :email:, :password:, :id_jabatan:, :tempat_lahir:, :tanggal_lahir:, :jenis_kelamin:, :alamat:, :nomor_hp:, :foto:, :role:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Pegawai.php(96): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pegawai->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pegawai))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-06-03 11:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:11:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:12:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:12:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 11:13:06 --> ErrorException: Undefined variable $pegawai
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 14.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pegawai', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php', 14)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(22): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-06-03 11:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 11:13:58 --> ErrorException: Undefined variable $jabatan
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 30.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jabatan', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(22): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-06-03 11:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 11:14:02 --> ErrorException: Undefined variable $jabatan
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 30.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jabatan', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(22): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-06-03 11:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 11:14:06 --> ErrorException: Undefined variable $jabatan
+[Method: GET, Route: dashboard]
+in APPPATH\Views\user\dashboard\dashboard.php on line 30.
+ 1 APPPATH\Views\user\dashboard\dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jabatan', 'D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php', 30)
+ 2 SYSTEMPATH\View\View.php(224): include('D:\\apps\\laragon\\www\\simpeg\\app\\Views\\user\\dashboard\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():221}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('user/dashboard/dashboard', [], true)
+ 5 APPPATH\Controllers\User.php(22): view('user/dashboard/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\apps\\laragon\\www\\simpeg\\public\\index.php')
+DEBUG - 2025-06-03 11:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-03 11:21:10 --> ErrorException: New expressions are not supported in this context
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\User.php on line 12.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-06-03 11:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-03 11:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

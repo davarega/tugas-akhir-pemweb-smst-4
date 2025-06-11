@@ -24,6 +24,7 @@ class SidebarMenuCell extends Cell
         } else {
             $menu = [
                 ['title' => 'Dashboard', 'url' => "/dashboard", 'icon' => 'bi-columns-gap'],
+                ['title' => 'Cuti', 'url' => '/dashboard/cuti', 'icon' => 'bi-calendar-check'],
             ];
         }
 

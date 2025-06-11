@@ -9,8 +9,12 @@
 	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 	<link rel="stylesheet" href="/css/style.css">
-
+	<!-- Bootstrap Icon -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<!-- Calender -->
+	<script type="module" src="https://unpkg.com/cally"></script>
+	<!-- Chart -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 	<title><?= $title ?? "SkyNara"; ?></title>
 </head>

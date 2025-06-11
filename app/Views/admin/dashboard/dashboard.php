@@ -1,7 +1,5 @@
 <?= $this->extend('layouts/dashboard_template') ?>
-
 <?= $this->section('content') ?>
-<script type="module" src="https://unpkg.com/cally"></script>
 
 <div class="p-4">
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -67,7 +65,7 @@
 									<td><?= $p['id_pegawai']; ?></td>
 									<td><?= $p['nama_lengkap']; ?></td>
 									<td>
-										<a href="#" class="btn btn-ghost btn-xs">details</a>
+										<a href="<?= base_url('/admin/pegawai/') . $p['id_pegawai']; ?>" class="btn btn-ghost btn-xs">details</a>
 									</td>
 								</tr>
 							<?php endforeach; ?>
@@ -75,6 +73,15 @@
 					</table>
 				</div>
 			</div>
+			<!-- name of each tab group should be unique -->
+			<h4>Distribusi Jenis Cuti</h4>
+			<canvas id="pieChartCuti" class="max-h-80 w-full"></canvas>
+			<script>
+				const cutiLabels = <?= $cutiLabels ?>;
+				const cutiData = <?= $cutiData ?>;
+			</script>
+
+			<script src="<?= base_url('js/cutiChartDashboard.js') ?>"></script>
 		</div>
 	</div>
 </div>

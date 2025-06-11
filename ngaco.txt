@@ -1,0 +1,1430 @@
+// user model
+package com.ngaco.pam.models
+
+data class User(
+    val id: String = "",
+    val name: String = "",
+    val email: String = ""
+)
+
+// group model
+package com.ngaco.pam.models
+
+data class Group(
+    val id: String = "",
+    val name: String = "",
+    val createdBy: String = "",
+    val members: List<String> = emptyList(),
+    val createdAt: Long = 0L
+)
+
+// message model
+package com.ngaco.pam.models
+
+data class Message(
+    val id: String = "",
+    val text: String = "",
+    val senderId: String = "",
+    val senderName: String = "",
+    val timestamp: Long = 0L,
+    val groupId: String = ""
+)
+
+// group adapter
+package com.ngaco.pam.adapters
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.ngaco.pam.databinding.ItemGroupBinding
+import com.ngaco.pam.models.Group
+import java.text.SimpleDateFormat
+import java.util.*
+
+class GroupAdapter(
+    private val groups: List<Group>,
+    private val onGroupClick: (Group) -> Unit
+) : RecyclerView.Adapter<GroupAdapter.GroupViewHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroupViewHolder {
+        val binding = ItemGroupBinding.inflate(
+            LayoutInflater.from(parent.context), parent, false
+        )
+        return GroupViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: GroupViewHolder, position: Int) {
+        holder.bind(groups[position])
+    }
+
+    override fun getItemCount() = groups.size
+
+    inner class GroupViewHolder(
+        private val binding: ItemGroupBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(group: Group) {
+            binding.tvGroupName.text = group.name
+            binding.tvMemberCount.text = "${group.members.size} anggota"
+            binding.tvGroupId.text = "ID: ${group.id}"
+
+            // Format created date
+            val dateFormat = SimpleDateFormat("dd MMM yyyy", Locale.getDefault())
+            binding.tvCreatedAt.text = "Dibuat: ${dateFormat.format(Date(group.createdAt))}"
+
+            binding.root.setOnClickListener {
+                onGroupClick(group)
+            }
+        }
+    }
+}
+
+// message adapter
+package com.ngaco.pam.adapters
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.ngaco.pam.databinding.ItemMessageReceivedBinding
+import com.ngaco.pam.databinding.ItemMessageSentBinding
+import com.ngaco.pam.models.Message
+import java.text.SimpleDateFormat
+import java.util.*
+
+class MessageAdapter(
+    private val messages: List<Message>,
+    private val currentUserId: String
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    companion object {
+        private const val VIEW_TYPE_SENT = 1
+        private const val VIEW_TYPE_RECEIVED = 2
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return if (messages[position].senderId == currentUserId) {
+            VIEW_TYPE_SENT
+        } else {
+            VIEW_TYPE_RECEIVED
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return if (viewType == VIEW_TYPE_SENT) {
+            val binding = ItemMessageSentBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
+            SentMessageViewHolder(binding)
+        } else {
+            val binding = ItemMessageReceivedBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
+            ReceivedMessageViewHolder(binding)
+        }
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val message = messages[position]
+        if (holder is SentMessageViewHolder) {
+            holder.bind(message)
+        } else if (holder is ReceivedMessageViewHolder) {
+            holder.bind(message)
+        }
+    }
+
+    override fun getItemCount() = messages.size
+
+    class SentMessageViewHolder(
+        private val binding: ItemMessageSentBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(message: Message) {
+            binding.tvMessage.text = message.text
+            binding.tvTime.text = formatTime(message.timestamp)
+        }
+
+        private fun formatTime(timestamp: Long): String {
+            val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+            return dateFormat.format(Date(timestamp))
+        }
+    }
+
+    class ReceivedMessageViewHolder(
+        private val binding: ItemMessageReceivedBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(message: Message) {
+            binding.tvMessage.text = message.text
+            binding.tvSenderName.text = message.senderName
+            binding.tvTime.text = formatTime(message.timestamp)
+        }
+
+        private fun formatTime(timestamp: Long): String {
+            val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+            return dateFormat.format(Date(timestamp))
+        }
+    }
+}
+
+// chat activity
+package com.ngaco.pam
+
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ngaco.pam.adapters.MessageAdapter
+import com.ngaco.pam.databinding.ActivityChatBinding
+import com.ngaco.pam.models.Message
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
+class ChatActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityChatBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+    private lateinit var messageAdapter: MessageAdapter
+    private val messagesList = mutableListOf<Message>()
+
+    private var groupId: String = ""
+    private var groupName: String = ""
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityChatBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        auth = Firebase.auth
+        db = Firebase.firestore
+
+        // Get group info from intent
+        groupId = intent.getStringExtra("group_id") ?: ""
+        groupName = intent.getStringExtra("group_name") ?: ""
+
+        if (groupId.isEmpty()) {
+            Toast.makeText(this, "Error: Group ID tidak ditemukan", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+
+        setupUI()
+        setupRecyclerView()
+        setupClickListeners()
+        loadMessages()
+    }
+
+    private fun setupUI() {
+        supportActionBar?.title = groupName
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    private fun setupRecyclerView() {
+        messageAdapter = MessageAdapter(messagesList, auth.currentUser?.uid ?: "")
+        binding.rvMessages.adapter = messageAdapter
+
+        val layoutManager = LinearLayoutManager(this)
+        layoutManager.stackFromEnd = true
+        binding.rvMessages.layoutManager = layoutManager
+    }
+
+    private fun setupClickListeners() {
+        binding.btnSend.setOnClickListener {
+            val messageText = binding.etMessage.text.toString().trim()
+            if (messageText.isNotEmpty()) {
+                sendMessage(messageText)
+            }
+        }
+    }
+
+    private fun sendMessage(messageText: String) {
+        val currentUser = auth.currentUser
+        currentUser?.let { user ->
+            val messageId = db.collection("groups").document(groupId)
+                .collection("messages").document().id
+
+            val message = Message(
+                id = messageId,
+                text = messageText,
+                senderId = user.uid,
+                senderName = user.displayName ?: user.email ?: "Unknown",
+                timestamp = System.currentTimeMillis(),
+                groupId = groupId
+            )
+
+            db.collection("groups").document(groupId)
+                .collection("messages").document(messageId)
+                .set(message)
+                .addOnSuccessListener {
+                    binding.etMessage.setText("")
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Gagal mengirim pesan: ${e.message}",
+                        Toast.LENGTH_SHORT).show()
+                }
+        }
+    }
+
+    private fun loadMessages() {
+        db.collection("groups").document(groupId)
+            .collection("messages")
+            .orderBy("timestamp", Query.Direction.ASCENDING)
+            .addSnapshotListener { value, error ->
+                if (error != null) {
+                    Toast.makeText(this, "Error loading messages: ${error.message}",
+                        Toast.LENGTH_SHORT).show()
+                    return@addSnapshotListener
+                }
+
+                messagesList.clear()
+                value?.documents?.forEach { document ->
+                    val message = document.toObject(Message::class.java)
+                    message?.let { messagesList.add(it) }
+                }
+                messageAdapter.notifyDataSetChanged()
+
+                // Scroll to bottom
+                if (messagesList.isNotEmpty()) {
+                    binding.rvMessages.scrollToPosition(messagesList.size - 1)
+                }
+            }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+}
+
+// groups activity
+package com.ngaco.pam
+
+import android.app.AlertDialog
+import android.content.Intent
+import android.os.Bundle
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.ngaco.pam.adapters.GroupAdapter
+import com.ngaco.pam.databinding.ActivityGroupsBinding
+import com.ngaco.pam.models.Group
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
+class GroupsActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityGroupsBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+    private lateinit var groupAdapter: GroupAdapter
+    private val groupsList = mutableListOf<Group>()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityGroupsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        auth = Firebase.auth
+        db = Firebase.firestore
+
+        setupRecyclerView()
+        setupClickListeners()
+        loadUserGroups()
+    }
+
+    private fun setupRecyclerView() {
+        groupAdapter = GroupAdapter(groupsList) { group ->
+            // Navigate to chat activity
+            val intent = Intent(this, ChatActivity::class.java)
+            intent.putExtra("group_id", group.id)
+            intent.putExtra("group_name", group.name)
+            startActivity(intent)
+        }
+
+        binding.rvGroups.adapter = groupAdapter
+        binding.rvGroups.layoutManager = LinearLayoutManager(this)
+    }
+
+    private fun setupClickListeners() {
+        binding.btnCreateGroup.setOnClickListener {
+            showCreateGroupDialog()
+        }
+
+        binding.btnJoinGroup.setOnClickListener {
+            showJoinGroupDialog()
+        }
+
+        binding.btnLogout.setOnClickListener {
+            auth.signOut()
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+    }
+
+    private fun showCreateGroupDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Buat Grup Baru")
+
+        val input = EditText(this)
+        input.hint = "Nama grup"
+        builder.setView(input)
+
+        builder.setPositiveButton("Buat") { _, _ ->
+            val groupName = input.text.toString().trim()
+            if (groupName.isNotEmpty()) {
+                createGroup(groupName)
+            } else {
+                Toast.makeText(this, "Nama grup tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        builder.setNegativeButton("Batal") { dialog, _ ->
+            dialog.cancel()
+        }
+
+        builder.show()
+    }
+
+    private fun showJoinGroupDialog() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Join Grup")
+
+        val input = EditText(this)
+        input.hint = "ID Grup"
+        builder.setView(input)
+
+        builder.setPositiveButton("Join") { _, _ ->
+            val groupId = input.text.toString().trim()
+            if (groupId.isNotEmpty()) {
+                joinGroup(groupId)
+            } else {
+                Toast.makeText(this, "ID grup tidak boleh kosong", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        builder.setNegativeButton("Batal") { dialog, _ ->
+            dialog.cancel()
+        }
+
+        builder.show()
+    }
+
+    private fun createGroup(groupName: String) {
+        val currentUser = auth.currentUser
+        currentUser?.let { user ->
+            val groupId = db.collection("groups").document().id
+            val group = Group(
+                id = groupId,
+                name = groupName,
+                createdBy = user.uid,
+                members = listOf(user.uid),
+                createdAt = System.currentTimeMillis()
+            )
+
+            db.collection("groups").document(groupId)
+                .set(group)
+                .addOnSuccessListener {
+                    Toast.makeText(this, "Grup berhasil dibuat!", Toast.LENGTH_SHORT).show()
+                    loadUserGroups()
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Gagal membuat grup: ${e.message}",
+                        Toast.LENGTH_LONG).show()
+                }
+        }
+    }
+
+    private fun joinGroup(groupId: String) {
+        val currentUser = auth.currentUser
+        currentUser?.let { user ->
+            db.collection("groups").document(groupId)
+                .get()
+                .addOnSuccessListener { document ->
+                    if (document.exists()) {
+                        val group = document.toObject(Group::class.java)
+                        group?.let {
+                            if (!it.members.contains(user.uid)) {
+                                val updatedMembers = it.members.toMutableList()
+                                updatedMembers.add(user.uid)
+
+                                db.collection("groups").document(groupId)
+                                    .update("members", updatedMembers)
+                                    .addOnSuccessListener {
+                                        Toast.makeText(this, "Berhasil join grup!",
+                                            Toast.LENGTH_SHORT).show()
+                                        loadUserGroups()
+                                    }
+                                    .addOnFailureListener { e ->
+                                        Toast.makeText(this, "Gagal join grup: ${e.message}",
+                                            Toast.LENGTH_LONG).show()
+                                    }
+                            } else {
+                                Toast.makeText(this, "Anda sudah bergabung di grup ini",
+                                    Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    } else {
+                        Toast.makeText(this, "Grup tidak ditemukan",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Error: ${e.message}",
+                        Toast.LENGTH_LONG).show()
+                }
+        }
+    }
+
+    private fun loadUserGroups() {
+        val currentUser = auth.currentUser
+        currentUser?.let { user ->
+            db.collection("groups")
+                .whereArrayContains("members", user.uid)
+                .addSnapshotListener { value, error ->
+                    if (error != null) {
+                        Toast.makeText(this, "Error loading groups: ${error.message}",
+                            Toast.LENGTH_SHORT).show()
+                        return@addSnapshotListener
+                    }
+
+                    groupsList.clear()
+                    value?.documents?.forEach { document ->
+                        val group = document.toObject(Group::class.java)
+                        group?.let { groupsList.add(it) }
+                    }
+                    groupAdapter.notifyDataSetChanged()
+                }
+        }
+    }
+}
+
+// login activity
+package com.ngaco.pam
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.ngaco.pam.databinding.ActivityLoginBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+
+class LoginActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityLoginBinding
+    private lateinit var auth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        auth = Firebase.auth
+
+        setupClickListeners()
+    }
+
+    private fun setupClickListeners() {
+        binding.btnLogin.setOnClickListener {
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
+
+            if (validateInput(email, password)) {
+                loginUser(email, password)
+            }
+        }
+
+        binding.tvSignup.setOnClickListener {
+            startActivity(Intent(this, SignupActivity::class.java))
+            finish()
+        }
+    }
+
+    private fun validateInput(email: String, password: String): Boolean {
+        if (email.isEmpty()) {
+            binding.etEmail.error = "Email tidak boleh kosong"
+            return false
+        }
+
+        if (password.isEmpty()) {
+            binding.etPassword.error = "Password tidak boleh kosong"
+            return false
+        }
+
+        if (password.length < 6) {
+            binding.etPassword.error = "Password minimal 6 karakter"
+            return false
+        }
+
+        return true
+    }
+
+    private fun loginUser(email: String, password: String) {
+        binding.btnLogin.isEnabled = false
+        binding.btnLogin.text = "Loading..."
+
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                binding.btnLogin.isEnabled = true
+                binding.btnLogin.text = "Login"
+
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Login berhasil!", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, GroupsActivity::class.java))
+                    finish()
+                } else {
+                    Toast.makeText(this, "Login gagal: ${task.exception?.message}",
+                        Toast.LENGTH_LONG).show()
+                }
+            }
+    }
+}
+
+// main activity
+package com.ngaco.pam
+
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.ngaco.pam.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Initialize Firebase Auth
+        auth = Firebase.auth
+
+        // Check if user is already logged in
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            // User is signed in, go to groups activity
+            startActivity(Intent(this, GroupsActivity::class.java))
+            finish()
+        } else {
+            // User is not signed in, show login/signup options
+            setupClickListeners()
+        }
+    }
+
+    private fun setupClickListeners() {
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+        binding.btnSignup.setOnClickListener {
+            startActivity(Intent(this, SignupActivity::class.java))
+        }
+    }
+}
+
+// signup activity
+package com.ngaco.pam
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.ngaco.pam.databinding.ActivitySignupBinding
+import com.ngaco.pam.models.User
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
+class SignupActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivitySignupBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var db: FirebaseFirestore
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivitySignupBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        auth = Firebase.auth
+        db = Firebase.firestore
+
+        setupClickListeners()
+    }
+
+    private fun setupClickListeners() {
+        binding.btnSignup.setOnClickListener {
+            val name = binding.etName.text.toString().trim()
+            val email = binding.etEmail.text.toString().trim()
+            val password = binding.etPassword.text.toString().trim()
+            val confirmPassword = binding.etConfirmPassword.text.toString().trim()
+
+            if (validateInput(name, email, password, confirmPassword)) {
+                signupUser(name, email, password)
+            }
+        }
+
+        binding.tvLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+    }
+
+    private fun validateInput(name: String, email: String, password: String, confirmPassword: String): Boolean {
+        if (name.isEmpty()) {
+            binding.etName.error = "Nama tidak boleh kosong"
+            return false
+        }
+
+        if (email.isEmpty()) {
+            binding.etEmail.error = "Email tidak boleh kosong"
+            return false
+        }
+
+        if (password.isEmpty()) {
+            binding.etPassword.error = "Password tidak boleh kosong"
+            return false
+        }
+
+        if (password.length < 6) {
+            binding.etPassword.error = "Password minimal 6 karakter"
+            return false
+        }
+
+        if (password != confirmPassword) {
+            binding.etConfirmPassword.error = "Password tidak sama"
+            return false
+        }
+
+        return true
+    }
+
+    private fun signupUser(name: String, email: String, password: String) {
+        binding.btnSignup.isEnabled = false
+        binding.btnSignup.text = "Loading..."
+
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    user?.let {
+                        saveUserToFirestore(it.uid, name, email)
+                    }
+                } else {
+                    binding.btnSignup.isEnabled = true
+                    binding.btnSignup.text = "Daftar"
+                    Toast.makeText(this, "Signup gagal: ${task.exception?.message}",
+                        Toast.LENGTH_LONG).show()
+                }
+            }
+    }
+
+    private fun saveUserToFirestore(uid: String, name: String, email: String) {
+        val user = User(uid, name, email)
+
+        db.collection("users").document(uid)
+            .set(user)
+            .addOnSuccessListener {
+                binding.btnSignup.isEnabled = true
+                binding.btnSignup.text = "Daftar"
+                Toast.makeText(this, "Akun berhasil dibuat!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, GroupsActivity::class.java))
+                finish()
+            }
+            .addOnFailureListener { e ->
+                binding.btnSignup.isEnabled = true
+                binding.btnSignup.text = "Daftar"
+                Toast.makeText(this, "Gagal menyimpan data: ${e.message}",
+                    Toast.LENGTH_LONG).show()
+            }
+    }
+}
+
+// splash activity
+package com.ngaco.pam
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.ngaco.pam.databinding.ActivitySplashBinding
+
+class SplashActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySplashBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }, 1500) // Delay 1.5 detik
+    }
+}
+
+// android manifest
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false"
+            android:parentActivityName=".GroupsActivity" />
+        <activity
+            android:name=".GroupsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>
+
+// activity chat
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:background="@android:color/background_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ketik pesan..."
+            android:background="@drawable/bg_message_input"
+            android:padding="12dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="3"
+            android:inputType="textMultiLine|textCapSentences" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kirim"
+            android:backgroundTint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+// activity groups
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/btnCreateGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Buat Grup"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@color/colorPrimary" />
+
+        <Button
+            android:id="@+id/btnJoinGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Join Grup"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGroups"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_margin="16dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
+
+// activity login
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="48dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Belum punya akun? Daftar disini"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+// activity main
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NGACO"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="64dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chat Grup Sederhana"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Akun"
+        android:textSize="16sp"
+        android:backgroundTint="@android:color/transparent"
+        android:textColor="@android:color/white"
+        style="?android:attr/borderlessButtonStyle" />
+
+</LinearLayout>
+
+// activity signup
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daftar Akun"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginBottom="48dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Nama Lengkap">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="Konfirmasi Password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daftar"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sudah punya akun? Login disini"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+// activity splash
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NGACO"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center" />
+</FrameLayout>
+
+// item group
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Grup"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvMemberCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 anggota"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvGroupId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID: 123456"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvCreatedAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dibuat: 25 Jan 2024"
+            android:textSize="12sp"
+            android:textColor="@android:color/darker_gray" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
+// item message received
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="start"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_message_received"
+        android:padding="12dp"
+        android:layout_marginEnd="64dp"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/tvSenderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pengirim"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesan yang diterima"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:layout_gravity="end" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+// item message sent
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="end"
+    android:padding="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_message_sent"
+        android:padding="12dp"
+        android:layout_marginStart="64dp"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pesan yang dikirim"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:34"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:alpha="0.8"
+            android:layout_gravity="end" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+// colors
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#03DAC5</color>
+</resources>
+
+// strings
+<resources>
+    <string name="app_name">NGACO</string>
+</resources>
+
+// style
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema utama aplikasi -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Tema tanpa ActionBar -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
+
+// build.gradle.ks (module)
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+
+    id("com.google.gms.google-services")
+}
+
+android {
+    namespace = "com.ngaco.pam"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.ngaco.pam"
+        minSdk = 24
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+
+    implementation(platform("com.google.firebase:firebase-bom:33.14.0"))
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
+    implementation("com.google.firebase:firebase-analytics")
+}
+
+// bg message input
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/background_light" />
+    <stroke android:width="1dp" android:color="@android:color/darker_gray" />
+    <corners android:radius="20dp" />
+</shape>
+
+// bg message received
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/white" />
+    <stroke android:width="1dp" android:color="@android:color/darker_gray" />
+    <corners android:radius="18dp" />
+</shape>
+
+// bg message sent
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/colorPrimary" />
+    <corners android:radius="18dp" />
+</shape>

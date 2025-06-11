@@ -13,16 +13,16 @@ $routes->post('auth/login', 'Auth::login');
 $routes->get('logout', 'Auth::logout');
 
 $routes->group('dashboard', ['filter' => 'auth'], function ($routes) {
-	$routes->get('/', 'User::index');
+	$routes->get('/', 'Dashboard::user');
 	$routes->get('pegawai', 'User::pegawai');
 	$routes->get('jadwal', 'User::jadwal');
-	$routes->get('cuti', 'User::cuti');
+	$routes->get('cuti', 'Cuti::u_index');
 	// tambah halaman untuk pegawai disini
 });
 
-$routes->get('admin', 'Admin::index', ['filter' => 'auth', 'filter' => 'admin']);
+$routes->get('admin', 'Dashboard::admin', ['filter' => 'auth', 'filter' => 'admin']);
 $routes->group('admin', ['filter' => 'auth', 'filter' => 'admin'], function ($routes) {
-	$routes->get('dashboard', 'Admin::index');
+	$routes->get('dashboard', 'Dashboard::admin');
 	// tambah halaman untuk admin disini
 	$routes->get('pegawai', 'Pegawai::index');
 	$routes->get('pegawai/(:num)', 'Pegawai::show/$1');
@@ -40,9 +40,8 @@ $routes->group('admin', ['filter' => 'auth', 'filter' => 'admin'], function ($ro
 	$routes->post('jabatan/update/(:num)', 'Jabatan::update/$1');
 	$routes->get('jabatan/delete/(:num)', 'Jabatan::delete/$1');
 
-	$routes->get('cuti', 'Cuti::index');
-	$routes->get('cuti/(:num)', 'Cuti::show/$1');
-	$routes->post('cuti/delete/(:num)', 'Cuti::delete/$1');
-	$routes->post('cuti/approve/(:num)', 'Cuti::approve/$1');
-	$routes->post('cuti/reject/(:num)', 'Cuti::reject/$1');
+	$routes->get('cuti', 'Cuti::a_index');
+	$routes->get('cuti/(:num)', 'Cuti::a_show/$1');
+	$routes->post('cuti/approve/(:num)', 'Cuti::a_approve/$1');
+	$routes->post('cuti/reject/(:num)', 'Cuti::a_reject/$1');
 });
