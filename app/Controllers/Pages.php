@@ -7,7 +7,7 @@ class Pages extends BaseController
 	public function index(): string
 	{
 		$data = [
-			'title' => 'Home | SkyNara',
+			'title' => 'Home | SIMPEG',
 			'content' => 'Welcome to CodeIgniter 4',
 		];
 		return view('pages/home', $data);

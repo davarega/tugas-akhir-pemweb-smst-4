@@ -9,24 +9,21 @@
 					<i class="bi bi-people text-3xl"></i>
 				</div>
 				<div class="stat-title">Total Semua Pegawai</div>
-				<div class="stat-value text-primary">12.345</div>
-				<div class="stat-desc">periode 1 Mei 2025</div>
+				<div class="stat-value text-primary"><?= $totalPegawai; ?></div>
+			</div>
+			<div class="stat shadow bg-base-100 rounded-box">
+				<div class="stat-figure text-secondary">
+					<i class="bi bi-people text-3xl"></i>
+				</div>
+				<div class="stat-title">Total Pegawai Aktif</div>
+				<div class="stat-value text-secondary"><?= $pegawaiKerja; ?></div>
 			</div>
 			<div class="stat shadow bg-base-100 rounded-box">
 				<div class="stat-figure text-accent">
 					<i class="bi bi-people text-3xl"></i>
 				</div>
-				<div class="stat-title">Total Pegawai Aktif</div>
-				<div class="stat-value text-accent">12.234</div>
-				<div class="stat-desc">periode 1 Mei 2025</div>
-			</div>
-			<div class="stat shadow bg-base-100 rounded-box">
-				<div class="stat-figure text-warning">
-					<i class="bi bi-people text-3xl"></i>
-				</div>
 				<div class="stat-title">Total Pegawai Cuti</div>
-				<div class="stat-value text-warning">123</div>
-				<div class="stat-desc">periode 1 Mei 2025</div>
+				<div class="stat-value text-accent"><?= $pegawaiCuti; ?></div>
 			</div>
 			<calendar-date class="cally bg-base-100 w-full border border-base-300 shadow-lg rounded-box">
 				<svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

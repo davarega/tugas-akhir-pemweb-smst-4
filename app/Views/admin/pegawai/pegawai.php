@@ -14,6 +14,7 @@
 					<th></th>
 					<th>ID Pegawai</th>
 					<th>Nama Pegawai</th>
+					<th>Role</th>
 					<th>Aksi</th>
 				</tr>
 			</thead>
@@ -26,7 +27,13 @@
 						<td><?= $p['id_pegawai']; ?></td>
 						<td><?= $p['nama_lengkap']; ?></td>
 						<td>
-							<a href="/admin/pegawai/<?= $p['id_pegawai']; ?>" class="btn btn-ghost btn-xs">details</a>
+							<?php if ($p['role'] == 'admin'): ?>
+								<span class="badge badge-secondary">Admin</span>
+							<?php else: ?>
+								<span class="badge badge-primary">Pegawai</span>
+							<?php endif; ?>
+						<td>
+							<a href="/admin/pegawai/<?= $p['id_pegawai']; ?>" class="btn btn-outline btn-primary"><i class="bi bi-eye"></i></a>
 						</td>
 					</tr>
 				<?php endforeach; ?>

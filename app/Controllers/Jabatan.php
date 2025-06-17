@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\JabatanModel;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class Jabatan extends BaseController
@@ -15,14 +16,14 @@ class Jabatan extends BaseController
         $this->user = session()->get('user');
 
         $this->data = [
-            // 'sidebarMenu' => $this->adminSidebarMenu,
+            'title' => 'Jabatan',
+            'active' => 'Jabatan',
             'user' => $this->user,
         ];
     }
     public function index()
     {
-        $this->data['title'] = 'Jabatan';
-        $this->data['active'] = 'Jabatan';
+        $this->data['jabatans'] = (new JabatanModel())->findAll();
         return view('admin/jabatan/jabatan', $this->data);
     }
 }

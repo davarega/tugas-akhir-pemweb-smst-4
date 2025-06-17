@@ -1,74 +1,109 @@
 <?= $this->extend('layouts/dashboard_template') ?>
 
 <?= $this->section('content') ?>
-<div class="p-4">
-	<h1>Ini halaman tambah pegawai</h1>
-	<form action="<?= base_url('/admin/pegawai/store') ?>" method="post" enctype="multipart/form-data">
+<div class="p-6">
+	<div class="flex justify-between items-center mb-4">
+		<div class="inline-flex items-center gap-2">
+			<a href="/admin/pegawai" class="btn btn-ghost"><i class="bi bi-caret-left font-bold text-2xl"></i></a>
+			<h1 class="text-3xl font-bold">Form Tambah Pegawai</h1>
+		</div>
+	</div>
+
+	<form action="<?= base_url('/admin/pegawai/store') ?>" method="post" enctype="multipart/form-data" class="space-y-4">
 		<?= csrf_field() ?>
 
-		<label>ID Pegawai</label><br>
-		<input type="text" name="id_pegawai" value="<?= old('id_pegawai') ?>"><br>
-		<?= session('errors.id_pegawai') ?><br><br>
+		<div class="card bg-base-100 shadow-xl rounded-xl p-6 space-y-4">
+			<!-- Grid Form -->
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">ID Pegawai</label>
+				<input type="text" name="id_pegawai" class="input input-bordered w-full" value="<?= old('id_pegawai') ?>">
+			</div>
+			<?= session('errors.id_pegawai') ?>
 
-		<label>Nama Lengkap</label><br>
-		<input type="text" name="nama_lengkap" value="<?= old('nama_lengkap') ?>"><br>
-		<?= session('errors.nama_lengkap') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Nama Lengkap</label>
+				<input type="text" name="nama_lengkap" class="input input-bordered w-full" value="<?= old('nama_lengkap') ?>">
+			</div>
+			<?= session('errors.nama_lengkap') ?>
 
-		<label>Email</label><br>
-		<input type="email" name="email" value="<?= old('email') ?>"><br>
-		<?= session('errors.email') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Email</label>
+				<input type="email" name="email" class="input input-bordered w-full" value="<?= old('email') ?>">
+			</div>
+			<?= session('errors.email') ?>
 
-		<label>Password</label><br>
-		<input type="password" name="password"><br>
-		<?= session('errors.password') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Password</label>
+				<input type="password" name="password" class="input input-bordered w-full">
+			</div>
+			<?= session('errors.password') ?>
 
-		<label>Jabatan</label><br>
-		<select name="id_jabatan">
-			<option value="">-- Pilih Jabatan --</option>
-			<?php foreach ($jabatans as $jabatan): ?>
-				<option value="<?= $jabatan['id_jabatan'] ?>" <?= old('id_jabatan') == $jabatan['id_jabatan'] ? 'selected' : '' ?>>
-					<?= $jabatan['nama_jabatan'] ?>
-				</option>
-			<?php endforeach; ?>
-		</select><br>
-		<?= session('errors.id_jabatan') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Jabatan</label>
+				<select name="id_jabatan" class="select select-bordered w-full">
+					<option value="">-- Pilih Jabatan --</option>
+					<?php foreach ($jabatans as $jabatan): ?>
+						<option value="<?= $jabatan['id_jabatan'] ?>" <?= old('id_jabatan') == $jabatan['id_jabatan'] ? 'selected' : '' ?>>
+							<?= $jabatan['nama_jabatan'] ?>
+						</option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+			<?= session('errors.id_jabatan') ?>
 
-		<label>Tempat Lahir</label><br>
-		<input type="text" name="tempat_lahir" value="<?= old('tempat_lahir') ?>"><br>
-		<?= session('errors.tempat_lahir') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Tempat Lahir</label>
+				<input type="text" name="tempat_lahir" class="input input-bordered w-full" value="<?= old('tempat_lahir') ?>">
+			</div>
+			<?= session('errors.tempat_lahir') ?>
 
-		<label>Tanggal Lahir</label><br>
-		<input type="date" name="tanggal_lahir" value="<?= old('tanggal_lahir') ?>"><br>
-		<?= session('errors.tanggal_lahir') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Tanggal Lahir</label>
+				<input type="date" name="tanggal_lahir" class="input input-bordered w-full" value="<?= old('tanggal_lahir') ?>">
+			</div>
+			<?= session('errors.tanggal_lahir') ?>
 
-		<label>Jenis Kelamin</label><br>
-		<select name="jenis_kelamin">
-			<option value="">-- Pilih --</option>
-			<option value="L" <?= old('jenis_kelamin') == 'L' ? 'selected' : '' ?>>Laki-laki</option>
-			<option value="P" <?= old('jenis_kelamin') == 'P' ? 'selected' : '' ?>>Perempuan</option>
-		</select><br>
-		<?= session('errors.jenis_kelamin') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Jenis Kelamin</label>
+				<select name="jenis_kelamin" class="select select-bordered w-full">
+					<option value="">-- Pilih --</option>
+					<option value="L" <?= old('jenis_kelamin') == 'L' ? 'selected' : '' ?>>Laki-laki</option>
+					<option value="P" <?= old('jenis_kelamin') == 'P' ? 'selected' : '' ?>>Perempuan</option>
+				</select>
+			</div>
+			<?= session('errors.jenis_kelamin') ?>
 
-		<label>Alamat</label><br>
-		<textarea name="alamat"><?= old('alamat') ?></textarea><br>
-		<?= session('errors.alamat') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Alamat</label>
+				<textarea name="alamat" class="textarea textarea-bordered w-full"><?= old('alamat') ?></textarea>
+			</div>
+			<?= session('errors.alamat') ?>
 
-		<label>Nomor HP</label><br>
-		<input type="text" name="nomor_hp" value="<?= old('nomor_hp') ?>"><br>
-		<?= session('errors.nomor_hp') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Nomor HP</label>
+				<input type="text" name="nomor_hp" class="input input-bordered w-full" value="<?= old('nomor_hp') ?>">
+			</div>
+			<?= session('errors.nomor_hp') ?>
 
-		<label>Foto Profil</label><br>
-		<input type="file" name="foto"><br>
-		<?= session('errors.foto') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Foto Profil</label>
+				<input type="file" name="foto" class="file-input file-input-bordered w-full">
+			</div>
+			<?= session('errors.foto') ?>
 
-		<label>Role</label><br>
-		<select name="role">
-			<option value="pegawai" <?= old('role') == 'pegawai' ? 'selected' : '' ?>>Pegawai</option>
-			<option value="admin" <?= old('role') == 'admin' ? 'selected' : '' ?>>Admin</option>
-		</select><br>
-		<?= session('errors.role') ?><br><br>
+			<div class="grid grid-cols-2 items-center gap-4">
+				<label class="text-left font-semibold">Role</label>
+				<select name="role" class="select select-bordered w-full">
+					<option value="pegawai" <?= old('role') == 'pegawai' ? 'selected' : '' ?>>Pegawai</option>
+					<option value="admin" <?= old('role') == 'admin' ? 'selected' : '' ?>>Admin</option>
+				</select>
+			</div>
+			<?= session('errors.role') ?>
 
-		<button type="submit">Simpan</button>
+			<div class="flex justify-end">
+				<button type="submit" class="btn btn-primary">Simpan</button>
+			</div>
+		</div>
 	</form>
 </div>
 <?= $this->endSection() ?>

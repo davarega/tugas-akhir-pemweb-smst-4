@@ -16,7 +16,7 @@
 	<!-- Chart -->
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-	<title><?= $title ?? "SkyNara"; ?></title>
+	<title><?= $title ?? "SIMPEG"; ?></title>
 </head>
 
 <body class="bg-base-200 min-h-screen">
@@ -77,6 +77,31 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="toast" class="toast toast-top toast-end hidden z-50">
+		<div id="toast-message" class="alert alert-success">
+			<span id="toast-text"></span>
+		</div>
+	</div>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const toast = document.getElementById('toast');
+			const toastText = document.getElementById('toast-text');
+			const toastMsg = "<?= session('success') ?? session('error') ?>";
+			const isSuccess = <?= session('success') ? 'true' : 'false' ?>;
+
+			if (toastMsg) {
+				toast.classList.remove('hidden');
+				document.getElementById('toast-message').classList.add(isSuccess ? 'alert-success' : 'alert-error');
+				toastText.innerText = toastMsg;
+
+				setTimeout(() => {
+					toast.classList.add('hidden');
+				}, 3000);
+			}
+		});
+	</script>
 </body>
 
 </html>

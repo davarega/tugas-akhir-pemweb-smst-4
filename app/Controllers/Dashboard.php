@@ -26,10 +26,13 @@ class Dashboard extends BaseController
 	public function admin()
 	{
 		$this->data['pegawai'] = new PegawaiModel()->findAll();
-		$cutiStats = new CutiModel()->getCutiStatsByJenis();
+		$cutiStats = new CutiModel()->getApprovedCutiStatsByJenis();
 
 		$this->data['cutiLabels'] = json_encode(array_column($cutiStats, 'jenis'));
 		$this->data['cutiData']   = json_encode(array_column($cutiStats, 'total'));
+		$this->data['totalPegawai'] = count($this->data['pegawai']);
+		$this->data['pegawaiCuti'] = (new CutiModel())->getActiveCutiCount();
+		$this->data['pegawaiKerja'] = $this->data['totalPegawai'] - $this->data['pegawaiCuti'];
 
 		if (!$this->user) {
 			return redirect()->to('/login');

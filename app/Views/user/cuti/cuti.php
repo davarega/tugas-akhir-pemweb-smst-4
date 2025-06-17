@@ -13,7 +13,10 @@
 				<tr>
 					<th></th>
 					<th>ID Cuti</th>
-					<th>Nama Cuti</th>
+					<th>jenis Cuti</th>
+					<th>Jumlah Hari</th>
+					<th>Tanggal Mulai</th>
+					<th>Status</th>
 					<th>Aksi</th>
 				</tr>
 			</thead>
@@ -24,9 +27,19 @@
 					<tr>
 						<th><?= $i++; ?></th>
 						<td><?= $p['id_cuti']; ?></td>
-						<td><?= $p['nama_lengkap']; ?></td>
+						<td><?= $p['jenis']; ?></td>
+						<td><?= $p['jumlah_hari']; ?></td>
+						<td><?= $p['tanggal_mulai']; ?></td>
 						<td>
-							<a href="/admin/cuti/<?= $p['id_cuti']; ?>" class="btn btn-ghost btn-xs">details</a>
+							<?php if ($p['status'] == 'diajukan'): ?>
+								<span class="badge badge-warning">Menunggu</span>
+							<?php elseif ($p['status'] == 'disetujui'): ?>
+								<span class="badge badge-success">Disetujui</span>
+							<?php elseif ($p['status'] == 'ditolak'): ?>
+								<span class="badge badge-error">Ditolak</span>
+							<?php endif; ?>
+						<td>
+							<a href="/dashboard/cuti/<?= $p['id_cuti']; ?>" class="btn btn-outline btn-primary"><i class="bi bi-eye"></i></a>
 						</td>
 					</tr>
 				<?php endforeach; ?>

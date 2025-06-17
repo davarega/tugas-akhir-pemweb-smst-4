@@ -33,4 +33,13 @@ class PegawaiModel extends Model
     protected $validationRules    = [];
     protected $validationMessages = [];
     protected $skipValidation     = false;
+
+    public function getPegawaiByRole($role = null)
+    {
+        if ($role === null) {
+            return $this->findAll();
+        }
+
+        return $this->where(['role' => $role])->findAll();
+    }
 }

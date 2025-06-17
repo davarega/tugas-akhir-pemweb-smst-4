@@ -11,6 +11,7 @@
 			<thead>
 				<tr>
 					<th></th>
+					<th>Id Cuti</th>
 					<th>Nama Pegawai</th>
 					<th>Status</th>
 					<th>Jenis Cuti</th>
@@ -25,8 +26,9 @@
 				<?php $i = 1; ?>
 				<?php foreach ($cuti as $c): ?>
 					<tr>
-						<th><?= $c['id_cuti']; ?></th>
-						<td><?= $c['nama_lengkap']; ?></td>
+						<th><?= $i++; ?></th>
+						<td><?= $c['id_cuti']; ?></td>
+						<td><?= $c['nama_pegawai']; ?></td>
 						<td class="text-nowrap">
 							<?php if ($c['status'] == 'disetujui'): ?>
 								<span class="badge badge-success">Disetujui</span>
@@ -43,10 +45,10 @@
 						<td>
 							<!-- <a href="/admin/cuti/<?= $c['id_cuti']; ?>" class="btn btn-ghost btn-xs">details</a> -->
 							<form action="cuti/approve/<?= $c["id_cuti"]; ?>" method="post" style="display:inline;">
-								<button class="btn btn-sm btn-soft btn-success" type="submit">Terima</button>
+								<button class="btn btn-sm btn-soft btn-success" type="submit"><i class="bi bi-check-lg"></i></button>
 							</form>
 							<form action="cuti/reject/<?= $c["id_cuti"]; ?>" method="post" style="display:inline;">
-								<button class="btn btn-sm btn-soft btn-error" type="submit">Tolak</button>
+								<button class="btn btn-sm btn-soft btn-error" type="submit"><i class="bi bi-x-lg"></i></button>
 							</form>
 						</td>
 					</tr>
