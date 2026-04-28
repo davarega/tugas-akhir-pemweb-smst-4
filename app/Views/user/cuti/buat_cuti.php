@@ -5,10 +5,10 @@
 	<div class="flex justify-between items-center mb-4">
 		<div class="inline-flex">
 			<a href="/dashboard/cuti" class="btn btn-ghost"><i class="bi bi-caret-left font-bold text-2xl"></i></a>
-			<h1 class="text-3xl font-bold">Detail Cuti</h1>
+			<h1 class="text-3xl font-bold">Ajukan Cuti</h1>
 		</div>
 	</div>
-	<form action="/dashboard/cuti/store/" method="post" enctype="multipart/form-data">
+	<form action="<?= base_url('/dashboard/cuti/store') ?>" method="post" enctype="multipart/form-data">
 		<?= csrf_field() ?>
 
 		<div class="card bg-base-100 shadow-xl rounded-xl p-6 space-y-4">

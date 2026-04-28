@@ -8,6 +8,10 @@ class JabatanModel extends Model
 {
     protected $table            = 'jabatan';
     protected $primaryKey       = 'id_jabatan';
+    protected $allowedFields = [
+        'id_jabatan',
+        'nama_jabatan',
+    ];
 
     public function getJabatan($id = false)
     {

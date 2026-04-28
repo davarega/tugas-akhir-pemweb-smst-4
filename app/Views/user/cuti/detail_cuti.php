@@ -7,7 +7,27 @@
 			<a href="/dashboard/cuti" class="btn btn-ghost"><i class="bi bi-caret-left font-bold text-2xl"></i></a>
 			<h1 class="text-3xl font-bold">Detail Cuti</h1>
 		</div>
-		<a href="/dashboard/cuti/delete/<?= $cuti['id_cuti']; ?>" class="btn btn-error btn-outline"><i class="bi bi-trash"></i>Hapus</a>
+		<!-- <a href="/dashboard/cuti/delete/<?= $cuti['id_cuti']; ?>" class="btn btn-error btn-outline"><i class="bi bi-trash"></i>Hapus</a> -->
+		<label for="modal-<?= $cuti['id_cuti']; ?>" class="btn btn-error btn-outline">
+			<i class="bi bi-trash"></i>Hapus
+		</label>
+		<input type="checkbox" id="modal-<?= $cuti['id_cuti']; ?>" class="modal-toggle" />
+		<div class="modal" role="dialog">
+			<div class="modal-box">
+				<h3 class="font-bold text-lg text-red-600">Konfirmasi Hapus</h3>
+				<p class="py-4">Apakah kamu yakin ingin menghapus data cuti ini?</p>
+				<div class="modal-action">
+					<!-- Tombol batal -->
+					<label for="modal-<?= $cuti['id_cuti']; ?>" class="btn">Batal</label>
+
+					<!-- Form hapus -->
+					<form action="<?= base_url('/dashboard/cuti/delete/' . $cuti['id_cuti']); ?>" method="post" class="inline">
+						<?= csrf_field() ?>
+						<button type="submit" class="btn btn-error">Ya, Hapus</button>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<form action="/dashboard/cuti/update/<?= $cuti['id_cuti']; ?>" method="post">
 		<div class="card bg-base-100 shadow-xl rounded-xl p-6 space-y-4">

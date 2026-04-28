@@ -94,10 +94,12 @@ class CutiModel extends Model
     {
         $today = date('Y-m-d');
         $builder = $this->db->table($this->table);
+        $builder->select('COUNT(DISTINCT id_pegawai) as total');
         $builder->where('tanggal_mulai <=', $today);
         $builder->where('tanggal_selesai >=', $today);
         // Optional: include only approved leave
         $builder->where('status', 'disetujui');
-        return $builder->countAllResults();
+        $result = $builder->get()->getRowArray();
+        return isset($result['total']) ? (int)$result['total'] : 0;
     }
 }

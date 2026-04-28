@@ -15,8 +15,6 @@ class Auth extends Controller
     public function login()
     {
         try {
-            //code...
-
             $session = session();
             $model = new PegawaiModel();
             $idPegawai = $this->request->getPost('id_pegawai');

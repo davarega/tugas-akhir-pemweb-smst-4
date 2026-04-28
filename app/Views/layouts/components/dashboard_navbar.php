@@ -7,8 +7,10 @@
 	<div class="flex-1">
 		<a href="#" class="btn btn-ghost font-bold text-xl">SIMPEG</a>
 	</div>
-	<div class="flex gap-2">
-		<input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+	<div class="flex gap-2 items-center">
+		<div class="hidden lg:block">
+			<?= view_cell('SidebarMenuCell::show') ?>
+		</div>
 		<div class="flex-none">
 			<div class="dropdown dropdown-end">
 				<div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -27,6 +29,39 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="dropdown dropdown-bottom dropdown-end hidden lg:block">
+			<div tabindex="0" role="button" class="btn btn-ghost max-w-52">
+				<div class="avatar">
+					<div class="w-10 rounded-full">
+						<img alt="Tailwind CSS Navbar component" src="<?= $user['foto']; ?>" />
+					</div>
+				</div>
+				<span class="ml-2 font-bold truncate"><?= $user['nama_lengkap']; ?></span>
+			</div>
+			<ul
+				tabindex="0"
+				class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+				<li>
+					<a>
+						<i class="bi bi-person text-lg"></i>
+						Profile
+					</a>
+				</li>
+				<li>
+					<a>
+						<i class="bi bi-gear text-lg"></i>
+						Settings
+					</a>
+				</li>
+				<div class="border-t m-2 border-gray-300"></div>
+				<li>
+					<a href="/logout" class="text-red-500">
+						<i class="bi bi-box-arrow-right text-lg"></i>
+						Logout
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

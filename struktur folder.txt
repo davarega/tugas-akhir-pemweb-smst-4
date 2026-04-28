@@ -1,0 +1,83 @@
+├───Cells
+│       SidebarMenuCell.php
+├───Config
+│       Filters.php
+│       Routes.php
+├───Controllers
+│       Auth.php
+│       BaseController.php
+│       Cuti.php
+│       Dashboard.php
+│       Home.php
+│       Jabatan.php
+│       Pages.php
+│       Pegawai.php
+├───Database
+│   │   simpeg.sql
+│   ├───Migrations
+│   │       .gitkeep
+│   │       2025-05-16-115948_CreateJabatanTable.php
+│   │       2025-05-16-120000_CreatePegawaiTable.php
+│   │       2025-05-16-120105_CreateCutiTable.php
+│   └───Seeds
+│           DatabaseSeeder.php
+│           JabatanSeeder.php
+│           PegawaiSeeder.php
+├───Filters
+│       .gitkeep
+│       AdminFilter.php
+│       AuthFilter.php
+│       IsLoginFilter.php
+├───Models
+│       .gitkeep
+│       CutiModel.php
+│       JabatanModel.php
+│       PegawaiModel.php
+└───Views
+    │   default.php
+    │   welcome_message.php
+    ├───admin
+    │   ├───cuti
+    │   │       cuti.php
+    │   ├───dashboard
+    │   │       dashboard.php
+    │   ├───jabatan
+    │   │       edit_jabatan.php
+    │   │       jabatan.php
+    │   │       tambah_jabatan.php
+    │   └───pegawai
+    │           detail_pegawai.php
+    │           edit_pegawai.php
+    │           pegawai.php
+    │           tambah_pegawai.php
+    ├───auth
+    │       login.php
+    ├───cells
+    │       sidebar_menu.php
+    ├───errors
+    │   ├───cli
+    │   │       error_404.php
+    │   │       error_exception.php
+    │   │       production.php
+    │   └───html
+    │           debug.css
+    │           debug.js
+    │           error_400.php
+    │           error_404.php
+    │           error_exception.php
+    │           production.php
+    ├───layouts
+    │   │   dashboard_template.php
+    │   │
+    │   └───components
+    │           dashboard_navbar.php
+    ├───pages
+    │       about.php
+    │       home.php
+    └───user
+        ├───cuti
+        │       buat_cuti.php
+        │       cuti.php
+        │       detail_cuti.php
+        └───dashboard
+                dashboard.php

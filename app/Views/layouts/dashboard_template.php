@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-base-200 min-h-screen">
-	<div class="drawer bg-base-200 mx-auto max-w-[100rem] lg:drawer-open">
+	<div class="drawer bg-base-200 mx-auto max-w-[100rem]">
 		<input id="my-drawer" type="checkbox" class="drawer-toggle" />
 		<div class="drawer-content">
 			<?= $this->include('layouts/components/dashboard_navbar'); ?>
